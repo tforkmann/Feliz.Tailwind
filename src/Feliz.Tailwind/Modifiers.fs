@@ -97,6 +97,15 @@ type height =
     static member inline hScreen = prop.className "h-screen"
 
 [<Erase>]
+type justifyContent =
+    static member inline justifyStart = prop.className "justify-start"
+    static member inline justifyEnd = prop.className "justify-end"
+    static member inline justifyCenter = prop.className "justify-center"
+    static member inline justifyBetween = prop.className "justify-between"
+    static member inline justifyAround = prop.className "justify-around"
+    static member inline justifyEvenly = prop.className "justify-evenly"
+
+[<Erase>]
 type margin =
     /// Margin bottom `mb-2` 0.5 rem
     static member inline mb2 = prop.className "mb-2"
