@@ -13,4 +13,4 @@ or using [Paket](http://fsprojects.github.io/Paket/getting-started.html)
 
 ## Documentation
 
-Feliz.Tailwind has documentation available on https://tforkmann.github.io/Feliz.Tailwind
+WIP
