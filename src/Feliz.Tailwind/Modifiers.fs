@@ -294,6 +294,7 @@ type width =
     static member inline w72 = prop.className "w-72"
     static member inline w80 = prop.className "w-80"
     static member inline w92 = prop.className "w-92"
+    static member inline w96 = prop.className "w-96"
     static member inline wAuto = prop.className "w-auto"
     static member inline wMin = prop.className "w-min"
     static member inline wMax = prop.className "w-max"
