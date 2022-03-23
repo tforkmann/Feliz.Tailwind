@@ -86,6 +86,8 @@ NUGET
       Fake.Core.Environment (>= 5.20.4)
       Fake.Core.FakeVar (>= 5.20.4)
       FSharp.Core (>= 4.7.2)
+    Fake.Core.UserInput (5.22)
+      FSharp.Core (>= 6.0)
     Fake.Core.Xml (5.20.4)
       Fake.Core.String (>= 5.20.4)
       FSharp.Core (>= 4.7.2)

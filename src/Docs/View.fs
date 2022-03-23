@@ -47,6 +47,7 @@ let private leftSide (p: Page) =
     let miBadge (b: string) (t: string) (mp: Page) =
         Html.li [ Html.a [ prop.href mp
                            prop.onClick Router.goToUrl
+
                            // if p = mp then (menuItem.active ++ prop.className "justify-between")
                            // else prop.className "justify-between"
                            prop.children [ Html.span t

@@ -3,6 +3,7 @@ open Fake.Core
 open Fake.IO
 open Fake.IO.FileSystemOperators
 open Fake.Core.TargetOperators
+open System
 open System.IO
 
 open BuildHelpers
@@ -33,12 +34,15 @@ let createNuget proj =
     Tools.dotnet "restore --no-cache" proj
     Tools.dotnet "pack -c Release" proj
 
+let getBuildParam = Environment.environVar
+let isNullOrWhiteSpace = String.IsNullOrWhiteSpace
+
 let publishNuget proj =
     createNuget proj
     let nugetKey =
-        match Environment.environVarOrNone "NUGET_KEY" with
-        | Some nugetKey -> nugetKey
-        | None -> failwith "The Nuget API key must be set in a NUGET_KEY environmental variable"
+        match getBuildParam "nugetkey" with
+        | s when not (isNullOrWhiteSpace s) -> s
+        | _ -> UserInput.getUserPassword "NuGet Key: "
     let nupkg =
         Directory.GetFiles(proj </> "bin" </> "Release")
         |> Seq.head

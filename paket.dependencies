@@ -4,8 +4,8 @@ source https://api.nuget.org/v3/index.json
 framework: net6.0, netstandard2.0
 storage: none
 
-nuget FSharp.Core ~> 4.7.2
-nuget Feliz ~> 1.32.0
+nuget FSharp.Core
+nuget Feliz
 
 group Docs
     source https://api.nuget.org/v3/index.json
@@ -29,3 +29,4 @@ group Build
     nuget Fake.Core.Target
     nuget Fake.DotNet.Cli
     nuget Fake.IO.FileSystem
+    nuget Fake.Core.UserInput

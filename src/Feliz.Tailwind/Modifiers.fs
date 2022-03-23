@@ -115,6 +115,32 @@ type margin =
     static member inline ml2 = prop.className "ml-2"
 
 [<Erase>]
+type maxWidth =
+    static member inline w0 = prop.className "max-w-0"
+    static member inline wNone = prop.className "max-w-none"
+    static member inline wXs = prop.className "max-w-xs"
+    static member inline wSm = prop.className "max-w-sm"
+    static member inline wMm = prop.className "max-w-md"
+    static member inline wLg = prop.className "max-w-lg"
+    static member inline wXl = prop.className "max-w-xl"
+    static member inline w2Xl = prop.className "max-w-2xl"
+    static member inline w3Xl = prop.className "max-w-3xl"
+    static member inline w4Xl = prop.className "max-w-4xl"
+    static member inline w5Xl = prop.className "max-w-5xl"
+    static member inline w6Xl = prop.className "max-w-6xl"
+    static member inline w7Xl = prop.className "max-w-7xl"
+    static member inline wFull = prop.className "max-w-full"
+    static member inline wMin = prop.className "max-w-min"
+    static member inline wMax = prop.className "max-w-max"
+    static member inline wFit = prop.className "max-w-fit"
+    static member inline wProse = prop.className "max-w-prose"
+    static member inline wScreenSm = prop.className "max-w-screen-sm"
+    static member inline wScreenMd = prop.className "max-w-screen-md"
+    static member inline wScreenLg = prop.className "max-w-screen-lg"
+    static member inline wScreenXl = prop.className "max-w-screen-xl"
+    static member inline wScreen2Xl = prop.className "max-w-screen-2xl"
+
+[<Erase>]
 type outline =
     /// Outline `outline-none`
     static member inline outlineNone = prop.className "outline-none"
@@ -193,6 +219,7 @@ type postion =
     static member inline relative = prop.className "relative"
     /// Position with `sticky`
     static member inline sticky = prop.className "sticky"
+
 
 [<Erase>]
 type width =
