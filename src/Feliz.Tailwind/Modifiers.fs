@@ -141,6 +141,49 @@ type maxWidth =
     static member inline wScreen2Xl = prop.className "max-w-screen-2xl"
 
 [<Erase>]
+type maxHeight =
+    static member inline h0 = prop.className "max-h-0"
+    static member inline hPx = prop.className "max-h-px"
+    static member inline h0Point5 = prop.className "max-h-0.5"
+    static member inline h1 = prop.className "max-h-1"
+    static member inline h1Point5 = prop.className "max-h-1.5"
+    static member inline h2 = prop.className "max-h-2"
+    static member inline h2Point5 = prop.className "max-h-2.5"
+    static member inline h3 = prop.className "max-h-3"
+    static member inline h3Point5 = prop.className "max-h-3.5"
+    static member inline h4 = prop.className "max-h-4"
+    static member inline h5 = prop.className "max-h-5"
+    static member inline h6 = prop.className "max-h-5"
+    static member inline h7 = prop.className "max-h-7"
+    static member inline h8 = prop.className "max-h-8"
+    static member inline h9 = prop.className "max-h-9"
+    static member inline h10 = prop.className "max-h-10"
+    static member inline h11 = prop.className "max-h-11"
+    static member inline h12 = prop.className "max-h-12"
+    static member inline h14 = prop.className "max-h-14"
+    static member inline h16 = prop.className "max-h-16"
+    static member inline h20 = prop.className "max-h-20"
+    static member inline h24 = prop.className "max-h-24"
+    static member inline h28 = prop.className "max-h-28"
+    static member inline h32 = prop.className "max-h-32"
+    static member inline h36 = prop.className "max-h-36"
+    static member inline h40 = prop.className "max-h-40"
+    static member inline h44 = prop.className "max-h-44"
+    static member inline h48 = prop.className "max-h-48"
+    static member inline h52 = prop.className "max-h-52"
+    static member inline h56 = prop.className "max-h-56"
+    static member inline h60 = prop.className "max-h-60"
+    static member inline h64 = prop.className "max-h-64"
+    static member inline h72 = prop.className "max-h-72"
+    static member inline h80 = prop.className "max-h-80"
+    static member inline h96 = prop.className "max-h-96"
+    static member inline hFull = prop.className "max-h-full"
+    static member inline hScreen = prop.className "max-h-screen"
+    static member inline hMin = prop.className "max-h-min"
+    static member inline hMax = prop.className "max-h-max"
+    static member inline hFit = prop.className "max-h-fit"
+
+[<Erase>]
 type outline =
     /// Outline `outline-none`
     static member inline outlineNone = prop.className "outline-none"
@@ -163,8 +206,6 @@ type textColor =
     static member inline blue600 = prop.className "text-blue-600"
     /// Text color `text-neutral-50`
     static member inline neutral50 = prop.className "text-neutral-50"
-
-
 
 [<Erase>]
 type padding =
