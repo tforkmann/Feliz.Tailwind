@@ -41,11 +41,13 @@ type borderWidth =
 
 [<Erase>]
 type boxShadow =
-    /// Box Shadow with `shadow`
+    static member inline shadowSm = prop.className "shadow-sm"
     static member inline shadow = prop.className "shadow"
-    /// Box Shadow with `shadow-md`
     static member inline shadowMd = prop.className "shadow-md"
-    /// Box Shadow with `shadow-none`
+    static member inline shadowLg = prop.className "shadow-lg"
+    static member inline shadowXl = prop.className "shadow-xl"
+    static member inline shadow2Xl = prop.className "shadow-2xl"
+    static member inline shadowInner = prop.className "shadow-inner"
     static member inline shadowNone = prop.className "shadow-none"
 [<Erase>]
 type display =
