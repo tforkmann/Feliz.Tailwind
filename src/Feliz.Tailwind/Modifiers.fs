@@ -484,18 +484,23 @@ type maxHeight =
 
 [<Erase>]
 type outline =
-    /// Outline `outline-none`
+
     static member inline outlineNone = prop.className "outline-none"
-    /// Outline `outline`
     static member inline outline = prop.className "outline"
-    /// Outline `outline-dashed`
     static member inline outlineDashed = prop.className "outline-dashed"
-    /// Outline `outline-dotted`
     static member inline outlineDotted = prop.className "outline-dotted"
-    /// Outline `outline-double`
     static member inline outlineDouble = prop.className "outline-double"
 
-
+[<Erase>]
+type overflow =
+    static member inline overflowAuto = prop.className "overflow-auto"
+    static member inline overflowHidden = prop.className "overflow-hidden"
+    static member inline overflowClip = prop.className "overflow-clip"
+    static member inline overflowVisible = prop.className "overflow-visible"
+    static member inline overflowScroll = prop.className "overflow-scroll"
+    static member inline overflowXAuto = prop.className "overflow-x-auto"
+    static member inline overflowYAuto = prop.className "overflow-y-auto"
+    static member inline overflowXHidden = prop.className "overflow-x-hidden"
 
 [<Erase>]
 type textColor =
