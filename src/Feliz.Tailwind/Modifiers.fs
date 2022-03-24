@@ -77,8 +77,18 @@ type flexDirection =
 [<Erase>]
 type fontSize =
     static member inline textXs = prop.className "text-xs"
+    static member inline textSm = prop.className "text-sm"
+    static member inline textBase = prop.className "text-base"
+    static member inline textLg = prop.className "text-lg"
+    static member inline textXl = prop.className "text-xl"
+    static member inline text2Xl = prop.className "text-2xl"
     static member inline text3Xl = prop.className "text-3xl"
+    static member inline text4Xl = prop.className "text-4xl"
     static member inline text5Xl = prop.className "text-5xl"
+    static member inline text6Xl = prop.className "text-6xl"
+    static member inline text7Xl = prop.className "text-7xl"
+    static member inline text8Xl = prop.className "text-8xl"
+    static member inline text9Xl = prop.className "text-9xl"
 
 [<Erase>]
 type fontWeight =
