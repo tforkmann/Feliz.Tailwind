@@ -523,56 +523,32 @@ type textColor =
 
 [<Erase>]
 type padding =
-    /// Padding with `p-0`
     static member inline p0 = prop.className "p-0"
-    /// Padding with `p-1`
     static member inline p1 = prop.className "p-1"
-    /// Padding with `p-2`
     static member inline p2 = prop.className "p-2"
-    /// Padding with `p-3`
     static member inline p3 = prop.className "p-3"
-    /// Padding with `p-4`
     static member inline p4 = prop.className "p-4"
-    /// Padding with `pt-0`
     static member inline pt0 = prop.className "pt-0"
-    /// Padding with `pt-1`
     static member inline pt1 = prop.className "pt-1"
-    /// Padding with `pt-2`
     static member inline pt2 = prop.className "pt-2"
-    /// Padding with `pt-3`
     static member inline pt3 = prop.className "pt-3"
-    /// Padding with `pt-4`
     static member inline pt4 = prop.className "pt-4"
-    /// Padding with `pb-2`
     static member inline pb2 = prop.className "pb-2"
-    /// Padding with `px-1`
     static member inline px1 = prop.className "px-1"
-    /// Padding with `px-2`
     static member inline px2 = prop.className "px-2"
-    /// Padding with `px-3`
     static member inline px3 = prop.className "px-3"
-    /// Padding with `px-4`
     static member inline px4 = prop.className "px-4"
-    /// Padding with `px-5`
     static member inline px5 = prop.className "px-5"
-    /// Padding with `py-1`
     static member inline py1 = prop.className "py-1"
-    /// Padding with `py-2`
     static member inline py2 = prop.className "py-2"
-    /// Padding with `py-3`
     static member inline py3 = prop.className "py-3"
-    /// Padding with `py-4`
     static member inline py4 = prop.className "py-4"
-    /// Padding with `py-5`
     static member inline py5 = prop.className "py-5"
 
 [<Erase>]
 type postion =
-    /// Position with `absolute`
     static member inline absolute = prop.className "absolute"
-    /// Position with `relative`
     static member inline relative = prop.className "relative"
-    /// Position with `sticky`
     static member inline sticky = prop.className "sticky"
 
 
