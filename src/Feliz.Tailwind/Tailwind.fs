@@ -48,3 +48,17 @@ type Tailwind =
     static member inline flex string = Helpers.Elm.string Html.div string "flex"
     static member inline flex int = Helpers.Elm.int Html.div int "flex"
     static member inline flex float = Helpers.Elm.float Html.div float "flex"
+
+    static member inline grid props = Helpers.Elm.props Html.div props "grid"
+    static member inline grid (children: #seq<ReactElement>) = Helpers.Elm.children Html.div children "grid"
+    static member inline grid elm = Helpers.Elm.elm Html.div elm "grid"
+    static member inline grid string = Helpers.Elm.string Html.div string "grid"
+    static member inline grid int = Helpers.Elm.int Html.div int "grid"
+    static member inline grid float = Helpers.Elm.float Html.div float "grid"
+
+    static member inline divCombine props = Helpers.Elm.props Html.div props ""
+    static member inline divCombine (children: #seq<ReactElement>) = Helpers.Elm.children Html.div children ""
+    static member inline divCombine elm = Helpers.Elm.elm Html.div elm ""
+    static member inline divCombine string = Helpers.Elm.string Html.div string ""
+    static member inline divCombine int = Helpers.Elm.int Html.div int ""
+    static member inline divCombine float = Helpers.Elm.float Html.div float ""

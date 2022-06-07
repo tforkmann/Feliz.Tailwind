@@ -771,6 +771,11 @@ type postion =
     static member inline relative = prop.className "relative"
     static member inline sticky = prop.className "sticky"
 
+[<Erase>]
+type visibility =
+    static member inline visible = prop.className "visible"
+    static member inline invisible = prop.className "invisible"
+
 
 [<Erase>]
 type width =
@@ -836,3 +841,19 @@ type width =
     static member inline wMin = prop.className "w-min"
     static member inline wMax = prop.className "w-max"
     static member inline wFit = prop.className "w-fit"
+
+[<Erase>]
+type grid =
+    static member inline ``cols-none`` = prop.className "cols-none"
+    static member inline ``cols-1`` = prop.className "cols-1"
+    static member inline ``cols-2`` = prop.className "cols-2"
+    static member inline ``cols-3`` = prop.className "cols-3"
+    static member inline ``cols-4`` = prop.className "cols-4"
+    static member inline ``cols-5`` = prop.className "cols-5"
+    static member inline ``cols-6`` = prop.className "cols-6"
+    static member inline ``cols-7`` = prop.className "cols-7"
+    static member inline ``cols-8`` = prop.className "cols-8"
+    static member inline ``cols-9`` = prop.className "cols-9"
+    static member inline ``cols-10`` = prop.className "cols-10"
+    static member inline ``cols-11`` = prop.className "cols-11"
+    static member inline ``cols-12`` = prop.className "cols-12"

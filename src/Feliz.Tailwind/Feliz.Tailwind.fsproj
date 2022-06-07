@@ -10,8 +10,8 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageTags>fsharp;fable;tailwindcss;feliz;Tailwind</PackageTags>
         <Authors>Tim Forkmann</Authors>
-        <Version>2.1.1</Version>
-        <PackageReleaseNotes>Follow major release of Tailwind</PackageReleaseNotes>
+        <Version>2.1.4</Version>
+        <PackageReleaseNotes>Add Visibility</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Modifiers.fs" />
