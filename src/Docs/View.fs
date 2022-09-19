@@ -4,7 +4,8 @@ open Feliz
 open Router
 open Elmish
 open SharedView
-open Feliz.Tailwind
+open Feliz.DaisyUI
+open Feliz.DaisyUI.Operators
 
 type Msg =
     | UrlChanged of Page
@@ -23,104 +24,125 @@ let update (msg: Msg) (state: State) : State * Cmd<Msg> =
 
 let private rightSide state dispatch (title: string) (docLink: string) elm =
 
-    Tailwind.flex
-        [
 
-          Html.div
-              [ padding.px5
-                padding.py5
-                prop.children
-                    [ Html.h2
-                          [ textColor.blue600
-                            margin.my6
-                            fontWeight.fontBold
-                            fontSize.text5Xl
-                            prop.children
-                                [ Html.text title
-                                  Html.button
-                                      [ margin.ml2
-                                        outline.outline
-                                        padding.px3
-                                        prop.href $"https://Tailwind.com{docLink}"
-                                        prop.children [ Html.text "Tailwind docs" ] ] ] ]
-                      elm ] ] ]
+    Daisy.drawerContent [
+        Daisy.navbar [
+            Daisy.navbarStart [
+                Html.divClassed
+                    "lg:hidden"
+                    [ Daisy.button.label [
+                          button.square
+                          button.ghost
+                          prop.htmlFor "main-menu"
+                          prop.children [
+                              Svg.svg [
+                                  svg.viewBox (0, 0, 24, 24)
+                                  svg.className "inline-block w-6 h-6 stroke-current"
+                                  svg.children [
+                                      Svg.path [
+                                          svg.d "M4 6h16M4 12h16M4 18h16"
+                                          svg.strokeWidth 2
+                                      ]
+                                  ]
+                              ]
+                          ]
+                      ] ]
+            ]
+        ]
+
+        Html.divClassed
+            "px-5 py-5"
+            [ Html.h2 [
+                  color.textPrimary
+                  ++ prop.className "my-6 text-5xl font-bold"
+                  prop.text title
+              ]
+
+              elm ]
+    ]
 
 let private leftSide (p: Page) =
     let miBadge (b: string) (t: string) (mp: Page) =
-        Html.li
-            [ Html.a
-                  [ prop.href mp
-                    prop.onClick Router.goToUrl
-
-                    // if p = mp then (menuItem.active ++ prop.className "justify-between")
-                    // else prop.className "justify-between"
-                    prop.children [ Html.span t; Html.span [ prop.className "badge"; prop.text b ] ] ] ]
+        Html.li [
+            Html.a [
+                prop.href mp
+                prop.onClick Router.goToUrl
+                if p = mp then
+                    (menuItem.active
+                     ++ prop.className "justify-between")
+                else
+                    prop.className "justify-between"
+                prop.children [
+                    Html.span t
+                    Html.span [
+                        prop.className "badge"
+                        prop.text b
+                    ]
+                ]
+            ]
+        ]
 
     let mi (t: string) (mp: Page) =
-        Html.li
-            [ Html.a
-                  [
-                    // if p = mp then menuItem.active
-                    prop.text t
-                    prop.href mp
-                    prop.onClick Router.goToUrl ] ]
+        Html.li [
+            Html.a [
+                if p = mp then menuItem.active
+                prop.text t
+                prop.href mp
+                prop.onClick Router.goToUrl
+            ]
+        ]
 
-    Tailwind.flex
-        [
-          // Tailwind.drawerOverlay [ prop.htmlFor "main-menu" ]
-          Html.aside
-              [ display.flex
-                flexDirection.flexCol
-                borderWidth.borderR
-                width.w80
-                backgroundColor.bgSlate100
-                //  prop.className "text-base-content"
-                prop.children
-                    [ Html.div
-                          [
-                            //  "font-title"
-                            padding.px5
-                            padding.py5
-                            fontWeight.fontBold
-                            fontSize.text3Xl
-                            display.inlineBlock
-                            prop.children
-                                [ Html.span
-                                      [
-                                        // color.textPrimary
-                                        prop.text "Feliz." ]
-                                  Html.text "Tailwind"
-                                  Html.a
-                                      [ prop.href "https://www.nuget.org/packages/Feliz.Tailwind"
-                                        prop.children
-                                            [ Html.img
-                                                  [ prop.src
-                                                        "https://img.shields.io/nuget/v/Feliz.Tailwind.svg?style=flat-square" ] ] ] ] ]
-                      Tailwind.flex
-                          [ flexDirection.flexCol
-                            padding.p4
-                            padding.pt0
-                            prop.children
-                                [ Html.div [ Html.span "Docs" ]; mi "Install" Page.Install; mi "Use" Page.Use ] ]
-                      Tailwind.flex
-                          [
-                            // menu.compact
-                            flexDirection.flexCol
-                            padding.p4
-                            padding.pt0
-                            prop.children
-                                [ Html.div [ Html.span "Borders" ]
-                                  mi "BorderRadius" Page.BorderRadius
-                                  // miBadge "updated" "Divider" Page.Divider
-
-                                  ] ] ] ] ]
+    Daisy.drawerSide [
+        Daisy.drawerOverlay [
+            prop.htmlFor "main-menu"
+        ]
+        Html.aside [
+            prop.className "flex flex-col border-r w-80 bg-base-100 text-base-content"
+            prop.children [
+                Html.divClassed
+                    "inline-block text-3xl font-title px-5 py-5 font-bold"
+                    [ Html.span [
+                          color.textPrimary
+                          prop.text "Feliz.ChartJS"
+                      ]
+                      Html.a [
+                          prop.href "https://www.nuget.org/packages/Feliz.ChartJS"
+                          prop.children [
+                              Html.img [
+                                  prop.src "https://img.shields.io/nuget/v/Feliz.ChartJS.svg?style=flat-square"
+                              ]
+                          ]
+                      ] ]
+                Daisy.menu [
+                    menu.compact
+                    prop.className "flex flex-col p-4 pt-0"
+                    prop.children [
+                        Daisy.menuTitle [ Html.span "Docs" ]
+                        mi "Install" Install
+                        mi "Use" Use
+                        ]
+                ]
+            ]
+        ]
+    ]
 
 let private inLayout state dispatch (title: string) (docLink: string) (p: Page) (elm: ReactElement) =
-    Tailwind.flex
-        [ height.hScreen
-          backgroundColor.bgWhite
-          fontSize.text3Xl
-          prop.children [ Tailwind.flex [ prop.children [ leftSide p; rightSide state dispatch title docLink elm ] ] ] ]
+    Html.div [
+        prop.className "bg-base-100 text-base-content h-screen"
+        theme.custom state.Theme
+        prop.children [
+            Daisy.drawer [
+                drawer.mobile
+                prop.children [
+                    Daisy.drawerToggle [
+                        prop.id "main-menu"
+                    ]
+                    rightSide state dispatch title docLink elm
+                    leftSide p
+                ]
+            ]
+        ]
+    ]
 
 
 
@@ -129,12 +151,18 @@ let AppView (state: State) (dispatch: Msg -> unit) =
 
     let title, docLink, content =
         match state.Page with
-        | Page.Install -> "Installation", "/docs/install", Pages.Install.InstallView()
-        | Page.Use -> "How to use", "/docs/use", Pages.Use.UseView()
-        | Page.BorderRadius -> "BorderRadius", "/borders/borderradius", Pages.BorderRadius.BorderRadiusView()
+        | Install -> "Installation", "/docs/install", Pages.Install.InstallView()
+        | Use -> "How to use", "/docs/use", Pages.Use.UseView()
 
-
-    React.router
-        [ router.hashMode
-          router.onUrlChanged (Page.parseFromUrlSegments >> UrlChanged >> dispatch)
-          router.children [ content |> inLayout state dispatch title docLink state.Page ] ]
+    React.router [
+        router.hashMode
+        router.onUrlChanged (
+            Page.parseFromUrlSegments
+            >> UrlChanged
+            >> dispatch
+        )
+        router.children [
+            content
+            |> inLayout state dispatch title docLink state.Page
+        ]
+    ]
