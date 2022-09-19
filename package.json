@@ -7,6 +7,11 @@
         "build": "dotnet fable ./src/Docs --outDir ./.fable-build && webpack"
     },
     "cross-os": {
+        "startdocs": {
+            "darwin": "NODE_ENV=development dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve",
+            "linux": "NODE_ENV=development dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve",
+            "win32": "set NODE_ENV=development& dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve"
+        },
         "start": {
             "darwin": "NODE_ENV=development dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve",
             "linux": "NODE_ENV=development dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve",

@@ -1,11 +1,10 @@
-group Docs
-    Fable.Core
-    Fable.React
-    Fable.Elmish
-    Fable.Elmish.React
-    Fable.Elmish.Debugger
-    Fable.Elmish.HMR
-    Feliz
-    Feliz.Router
-    Feliz.UseElmish
-
+Feliz.Router
+Zanaptak.TypedCssClasses
+Feliz.Markdown
+Fable.Elmish.Debugger
+Feliz.Bulma
+Feliz.DaisyUI
+Feliz.UseElmish
+Fable.Elmish.HMR
+Feliz.ChartJS
+Feliz.Tailwind
