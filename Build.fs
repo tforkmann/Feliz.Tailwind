@@ -58,14 +58,14 @@ Target.create "Publish" (fun _ ->
 )
 
 Target.create "PublishDocs" (fun _ ->
-    Tools.npm "build" ""
+    Tools.npm "run build" ""
 )
 
 Target.create "RunDocs" (fun _ ->
     Tools.npm "run startdocs" "")
 
 Target.create "Run" (fun _ ->
-    Tools.npm "start" ""
+    Tools.npm "run start" ""
 )
 
 let dependencies = [
