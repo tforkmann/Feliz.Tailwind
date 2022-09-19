@@ -13,7 +13,6 @@ nuget Feliz.Markdown
 nuget Feliz.UseElmish
 nuget Feliz.DaisyUI
 nuget Feliz.Tailwind
-nuget Fable.Elmish.HMR
 nuget Fake.Core.Target
 nuget Fake.DotNet.Cli
 nuget Fake.Core.ReleaseNotes
