@@ -61,6 +61,9 @@ Target.create "PublishDocs" (fun _ ->
     Tools.npm "build" ""
 )
 
+Target.create "RunDocs" (fun _ ->
+    run npm "run startdocs" ".")
+
 Target.create "Run" (fun _ ->
     Tools.npm "start" ""
 )
