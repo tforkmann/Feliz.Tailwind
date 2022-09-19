@@ -14,7 +14,7 @@ let UseView () =
             [ Html.text "Now you can start using library. Everything important starts with "
               Html.code [
                   prop.className "code"
-                  prop.text "ChartJS.*"
+                  prop.text "Tailwind.*"
               ]
               Html.text " module." ]
     ]

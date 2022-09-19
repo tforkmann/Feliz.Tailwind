@@ -12,7 +12,6 @@ nuget Zanaptak.TypedCssClasses
 nuget Feliz.Markdown
 nuget Feliz.UseElmish
 nuget Feliz.DaisyUI
-nuget Feliz.ChartJS
 nuget Feliz.Tailwind
 nuget Fable.Elmish.HMR
 nuget Fake.Core.Target
