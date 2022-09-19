@@ -16,3 +16,7 @@ release.sh
 *.orig
 *.DotSettings.user
 appsettings.Development.json
+dist
+.parcel-cache
+src/Docs/output/
+src/Client/output/

@@ -15,7 +15,7 @@ type State = { Page: Page; Theme: string }
 
 let init () =
     let nextPage = Router.currentUrl () |> Page.parseFromUrlSegments
-    { Page = nextPage; Theme = "light" }, Cmd.navigatePage nextPage
+    { Page = nextPage; Theme = "dark" }, Cmd.navigatePage nextPage
 
 let update (msg: Msg) (state: State) : State * Cmd<Msg> =
     match msg with
@@ -120,6 +120,7 @@ let private leftSide (p: Page) =
                         Daisy.menuTitle [ Html.span "Docs" ]
                         mi "Install" Install
                         mi "Use" Use
+                        mi "BorderRadius" BorderRadius
                         ]
                 ]
             ]
@@ -153,6 +154,7 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         match state.Page with
         | Install -> "Installation", "/docs/install", Pages.Install.InstallView()
         | Use -> "How to use", "/docs/use", Pages.Use.UseView()
+        | BorderRadius -> "BorderRadius", "/docs/use", Pages.BorderRadius.BorderRadiusView()
 
     React.router [
         router.hashMode

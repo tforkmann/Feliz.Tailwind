@@ -23,14 +23,14 @@ let clean proj = [ proj </> "bin"; proj </> "obj" ] |> Shell.cleanDirs
 Target.create "InstallClient" (fun _ ->
     printfn "Node version:"
     Tools.node "--version" clientSrcPath
-    printfn "Yarn version:"
-    Tools.yarn "--version" clientSrcPath
-    Tools.yarn "install --frozen-lockfile" clientSrcPath
+    printfn "Npm version:"
+    Tools.npm "--version" clientSrcPath
+    Tools.npm "install" clientSrcPath
 )
 
 let createNuget proj =
     clean proj
-    Tools.yarn "install" proj
+    Tools.npm "install" proj
     Tools.dotnet "restore --no-cache" proj
     Tools.dotnet "pack -c Release" proj
 
@@ -58,11 +58,11 @@ Target.create "Publish" (fun _ ->
 )
 
 Target.create "PublishDocs" (fun _ ->
-    Tools.yarn "build" ""
+    Tools.npm "build" ""
 )
 
 Target.create "Run" (fun _ ->
-    Tools.yarn "start" ""
+    Tools.npm "start" ""
 )
 
 let dependencies = [

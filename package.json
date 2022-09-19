@@ -1,6 +1,9 @@
 {
     "private": true,
     "scripts": {
+        "postcss:watch": "postcss ./src/Client/styles/additional_styles.css -o ./src/Client/styles/output.css --env development -w",
+        "postcss:build": "postcss ./src/Client/styles/additional_styles.css -o ./src/Client/styles/output.css --env production",
+        "parcel:serve": "parcel serve ./src/Client/index.html --port 8080",
         "prestart": "dotnet tool restore",
         "start": "cross-os start",
         "prebuild": "dotnet tool restore",
@@ -13,13 +16,14 @@
             "win32": "set NODE_ENV=development& dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve"
         },
         "start": {
-            "darwin": "NODE_ENV=development dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve",
-            "linux": "NODE_ENV=development dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve",
-            "win32": "set NODE_ENV=development& dotnet fable watch ./src/Docs --outDir ./.fable-build --run webpack serve"
+            "darwin": "NODE_ENV=development dotnet fable watch ./src/Client --outDir src/Client/output --run npm-run-all -s -p postcss:watch parcel:serve",
+            "linux": "NODE_ENV=development dotnet fable watch ./src/Client --outDir src/Client/output --run npm-run-all -s -p postcss:watch parcel:serve",
+            "win32": "set NODE_ENV=development& dotnet fable watch ./src/Client --outDir src/Client/output --run npm-run-all -s -p postcss:watch parcel:serve"
         }
     },
     "devDependencies": {
         "autoprefixer": "^10.4.0",
+        "buffer": "^6.0.3",
         "copy-webpack-plugin": "^9.0.1",
         "core-js": "^3.16.1",
         "cross-os": "^1.4.0",
@@ -29,21 +33,28 @@
         "graceful-fs": "^4.2.8",
         "html-webpack-plugin": "^5.3.2",
         "mini-css-extract-plugin": "^2.2.0",
+        "npm-run-all": "^4.1.5",
+        "parcel": "^2.6.0",
         "postcss": "^8.3.11",
-        "postcss-loader": "^6.2.0",
+        "postcss-cli": "^9.1.0",
+        "postcss-fontpath": "^1.0.0",
         "postcss-import": "^14.0.2",
+        "postcss-loader": "^6.2.0",
+        "process": "^0.11.10",
+        "querystring-es3": "^0.2.1",
         "react-dom": "^17.0.2",
         "remotedev": "^0.2.9",
         "resolve-url-loader": "^4.0.0",
-        "style-loader": "^3.2.1",
         "source-map-loader": "^3.0.0",
+        "style-loader": "^3.2.1",
         "webpack": "^5.49.0",
         "webpack-cli": "^4.7.2",
         "webpack-dev-server": "^4.3.1"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "daisyui": "^2.6.3",
         "react": "^17.0.2",
-        "tailwindcss": "^3.0.23",
-        "@fortawesome/fontawesome-free": "^5.15.4"
+        "tailwindcss": "^3.0.23"
     }
 }
