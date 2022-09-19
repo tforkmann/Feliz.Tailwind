@@ -15,7 +15,7 @@ type State = { Page: Page; Theme: string }
 
 let init () =
     let nextPage = Router.currentUrl () |> Page.parseFromUrlSegments
-    { Page = nextPage; Theme = "dark" }, Cmd.navigatePage nextPage
+    { Page = nextPage; Theme = "halloween" }, Cmd.navigatePage nextPage
 
 let update (msg: Msg) (state: State) : State * Cmd<Msg> =
     match msg with
