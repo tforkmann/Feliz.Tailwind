@@ -24,4 +24,4 @@ group Package
     source https://api.nuget.org/v3/index.json
     framework: netstandard2.0
 
-    nuget Feliz
+    nuget Feliz > 2.0.0
