@@ -10,7 +10,7 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageTags>fsharp;fable;tailwindcss;feliz;Tailwind</PackageTags>
         <Authors>Tim Forkmann</Authors>
-        <Version>2.1.6</Version>
+        <Version>2.1.7</Version>
         <PackageReleaseNotes>Add Visibility</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
