@@ -1,5 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Client", "src\Client\Client.fsproj", "{7C716DBC-68B5-462F-9E3D-F9D2D30E480F}"
+EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Docs", "src\Docs\Docs.fsproj", "{7C716DBC-68B5-462F-9E3D-F9D2D30E480F}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Feliz.Tailwind", "src\Feliz.Tailwind\Feliz.Tailwind.fsproj", "{3F7A6B8B-594C-4E1B-8374-722B2B3D8342}"
