@@ -816,6 +816,7 @@ type width =
     static member inline ``w2/3`` = prop.className "w-2/3"
     static member inline ``w1/4`` = prop.className "w-1/4"
     static member inline ``w2/4`` = prop.className "w-2/4"
+    static member inline ``w3/4`` = prop.className "w-3/4"
     static member inline ``w1/5`` = prop.className "w-1/5"
     static member inline ``w2/5`` = prop.className "w-2/5"
     static member inline ``w3/5`` = prop.className "w-3/5"
