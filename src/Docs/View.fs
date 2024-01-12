@@ -114,7 +114,7 @@ let private leftSide (p: Page) =
                           ]
                       ] ]
                 Daisy.menu [
-                    menu.compact
+                    menu.md
                     prop.className "flex flex-col p-4 pt-0"
                     prop.children [
                         Daisy.menuTitle [ Html.span "Docs" ]
@@ -133,7 +133,7 @@ let private inLayout state dispatch (title: string) (docLink: string) (p: Page) 
         theme.custom state.Theme
         prop.children [
             Daisy.drawer [
-                drawer.mobile
+                prop.className "lg:drawer-open"
                 prop.children [
                     Daisy.drawerToggle [
                         prop.id "main-menu"
