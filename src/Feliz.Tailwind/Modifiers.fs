@@ -67,7 +67,8 @@ type flex =
     static member inline flexAuto = prop.className "flex-auto"
     static member inline flexInitial = prop.className "flex-initial"
     static member inline flexNone = prop.className "flex-none"
-
+    static  member inline flexRow = prop.className "flex-row"
+    static member inline flexWrap = prop.className "flex-wrap"
 [<Erase>]
 type flexDirection =
     static member inline flexRow = prop.className "flex-row"
