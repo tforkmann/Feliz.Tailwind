@@ -62,6 +62,7 @@ type display =
 
 [<Erase>]
 type flex =
+    static member inline flex = prop.className "flex"
     static member inline flex1 = prop.className "flex-1"
     static member inline flexAuto = prop.className "flex-auto"
     static member inline flexInitial = prop.className "flex-initial"

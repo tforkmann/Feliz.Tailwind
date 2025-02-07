@@ -70,8 +70,8 @@ Target.create "Run" (fun _ ->
 
 let dependencies = [
     "InstallClient" ==> "PublishDocs"
-    "InstallClient" ==> "Publish"
     "InstallClient" ==> "Pack"
+    "InstallClient" ==> "Publish"
     "InstallClient" ==> "Run"
 ]
 
