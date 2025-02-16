@@ -10,7 +10,7 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageTags>fsharp;fable;tailwindcss;feliz;Tailwind</PackageTags>
         <Authors>Tim Forkmann</Authors>
-        <Version>3.0.2</Version>
+        <Version>3.0.4</Version>
         <PackageReleaseNotes>Update packages</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>

@@ -237,6 +237,15 @@ type fontWeight =
     static member inline fontBlack = prop.className "font-black"
 
 [<Erase>]
+type minHeight =
+    static member inline minHAuto = prop.className "min-h-auto"
+    static member inline minHFull = prop.className "min-h-full"
+    static member inline minHScreen = prop.className "min-h-screen"
+    static member inline minHMin = prop.className "min-h-min"
+    static member inline minHMax = prop.className "min-h-max"
+    static member inline minHFit = prop.className "min-h-fit"
+
+[<Erase>]
 type height =
     static member inline h0 = prop.className "h-0"
     static member inline hpx = prop.className "h-px"
