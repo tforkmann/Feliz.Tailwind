@@ -64,16 +64,11 @@ Target.create "PublishDocs" (fun _ ->
 Target.create "RunDocs" (fun _ ->
     Tools.npm "run start" docsSrcPath)
 
-Target.create "Run" (fun _ ->
-    Tools.npm "run start" clientSrcPath
-)
-
 let dependencies = [
     "InstallClient" ==> "PublishDocs"
     "InstallClient" ==> "Pack"
     "InstallClient" ==> "Publish"
-    "InstallClient" ==> "Run"
 ]
 
 [<EntryPoint>]
-let main args = runOrDefault "Run" args
+let main args = runOrDefault "RunDocs" args
