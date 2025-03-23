@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 const proxyTarget = process.env.services__server__http__0  || "http://localhost:5000"
 
-const port = process.env.PORT ? parseInt(process.env.PORT) : 3001;
+const port = process.env.PORT ? parseInt(process.env.PORT) : 8080;
 console.log("Proxying to " + proxyTarget);
 // https://vitejs.dev/config/
 export default defineConfig({
