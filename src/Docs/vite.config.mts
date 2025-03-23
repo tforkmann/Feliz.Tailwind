@@ -10,7 +10,7 @@ console.log("Proxying to " + proxyTarget);
 export default defineConfig({
     plugins: [react(),tailwindcss()],
     build: {
-        outDir: "../../deploy/public",
+        outDir:"../../publish/docs",
         emptyOutDir: true,
         rollupOptions: {
             output: {
