@@ -37,10 +37,14 @@ let ex2 =
         |> Html.div
 
     let code =
-        """Tailwind.borderRadius [
-    borderRadius.success
-    prop.text "Wow it works so great!"
-]"""
+        """
+        Tailwind.divCombine
+            [ Daisy.button.button
+                  [ button.outline
+                    button.primary
+                    button.lg
+                    borderRadius.rounded2Xl
+                    prop.text "This is rounded2XL" ] ]"""
 
     let title = Html.none
     codedView title code example
@@ -83,4 +87,4 @@ let ex4 =
     codedView title code example
 
 [<ReactComponent>]
-let BorderRadiusView () = React.fragment [ ex1 ]
+let BorderRadiusView () = React.fragment [ ex1;ex2;ex3;ex4 ]

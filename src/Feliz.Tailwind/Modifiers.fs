@@ -1015,3 +1015,12 @@ type gap =
     static member inline ``gap-7`` = prop.className "gap-7"
     static member inline ``gap-x-0`` = prop.className "gap-x-0"
     static member inline ``gap-y-0`` = prop.className "gap-y-0"
+
+[<Erase>]
+type textAlign =
+    static member inline left = prop.className "text-left"
+    static member inline center = prop.className "text-center"
+    static member inline right = prop.className "text-right"
+    static member inline justify = prop.className "text-justify"
+    static member inline start = prop.className "text-start"
+    static member inline ``end`` = prop.className "text-end"
