@@ -23,8 +23,6 @@ let update (msg: Msg) (state: State) : State * Cmd<Msg> =
     | SetTheme theme -> { state with Theme = theme }, Cmd.none
 
 let private rightSide state dispatch (title: string) (docLink: string) elm =
-
-
     Daisy.drawerContent [
         Daisy.navbar [
             Daisy.navbarStart [
@@ -57,7 +55,6 @@ let private rightSide state dispatch (title: string) (docLink: string) elm =
                   ++ prop.className "my-6 text-5xl font-bold"
                   prop.text title
               ]
-
               elm ]
     ]
 

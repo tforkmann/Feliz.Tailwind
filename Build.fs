@@ -13,7 +13,8 @@ initializeContext()
 
 let publishPath = Path.getFullName "publish"
 let srcPath = Path.getFullName "src"
-let clientSrcPath = srcPath </> "Docs"
+let clientSrcPath = srcPath </> "Client"
+let docsSrcPath = srcPath </> "Docs"
 let librarySrcPath = srcPath </> "Feliz.Tailwind"
 let appPublishPath = publishPath </> "app"
 
@@ -62,10 +63,10 @@ Target.create "PublishDocs" (fun _ ->
 )
 
 Target.create "RunDocs" (fun _ ->
-    Tools.npm "run startdocs" "")
+    Tools.npm "run start" docsSrcPath)
 
 Target.create "Run" (fun _ ->
-    Tools.npm "run start" ""
+    Tools.npm "run start" clientSrcPath
 )
 
 let dependencies = [
