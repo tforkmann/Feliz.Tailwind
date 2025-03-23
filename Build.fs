@@ -13,7 +13,6 @@ initializeContext()
 
 let publishPath = Path.getFullName "publish"
 let srcPath = Path.getFullName "src"
-let clientSrcPath = srcPath </> "Client"
 let docsSrcPath = srcPath </> "Docs"
 let librarySrcPath = srcPath </> "Feliz.Tailwind"
 let appPublishPath = publishPath </> "app"
@@ -23,10 +22,10 @@ let clean proj = [ proj </> "bin"; proj </> "obj" ] |> Shell.cleanDirs
 
 Target.create "InstallClient" (fun _ ->
     printfn "Node version:"
-    Tools.node "--version" clientSrcPath
+    Tools.node "--version" docsSrcPath
     printfn "Npm version:"
-    Tools.npm "--version" clientSrcPath
-    Tools.npm "install" clientSrcPath
+    Tools.npm "--version" docsSrcPath
+    Tools.npm "install" docsSrcPath
 )
 
 let createNuget proj =
