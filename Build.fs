@@ -58,7 +58,7 @@ Target.create "Publish" (fun _ ->
 )
 
 Target.create "PublishDocs" (fun _ ->
-    Tools.npm "run build" ""
+    Tools.npm "run build" docsSrcPath
 )
 
 Target.create "RunDocs" (fun _ ->
