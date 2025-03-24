@@ -1,8 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "start": "npm install && dotnet fable watch --outDir ./output --run vite serve",
-        "build": "npm install && dotnet fable --outDir ./output --run vite build"
+        "start": "npm install && dotnet fable watch ./src/Docs --outDir ./src/Docs/output --run vite serve",
+        "build": "npm install && dotnet fable ./src/Docs --outDir ./src/Docs/output --run vite build"
     },
     "devDependencies": {
         "@babel/core": "^7.6.4",
