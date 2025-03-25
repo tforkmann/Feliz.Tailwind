@@ -4,6 +4,7 @@ open Browser.Types
 open Feliz.Router
 open Fable.Core.JsInterop
 
+[<RequireQualifiedAccess>]
 type Page =
     | Install
     | Use
@@ -11,7 +12,6 @@ type Page =
     | BoxShadow
     | TextAlign
 
-[<RequireQualifiedAccess>]
 module Page =
     let defaultPage = Page.Install
 

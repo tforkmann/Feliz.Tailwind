@@ -115,11 +115,11 @@ let private leftSide (p: Page) =
                     prop.className "flex flex-col p-4 pt-0"
                     prop.children [
                         Daisy.menuTitle [ Html.span "Docs" ]
-                        mi "Install" Install
-                        mi "Use" Use
-                        mi "BorderRadius" BorderRadius
-                        mi "BoxShadow" BoxShadow
-                        mi "TextAlign" TextAlign
+                        mi "Install" Page.Install
+                        mi "Use" Page.Use
+                        mi "BorderRadius" Page.BorderRadius
+                        mi "BoxShadow" Page.BoxShadow
+                        mi "TextAlign" Page.TextAlign
                         ]
                 ]
             ]
@@ -151,11 +151,11 @@ let AppView (state: State) (dispatch: Msg -> unit) =
 
     let title, docLink, content =
         match state.Page with
-        | Install -> "Installation", "/docs/install", Pages.Install.InstallView()
-        | Use -> "How to use", "/docs/use", Pages.Use.UseView()
-        | BorderRadius -> "BorderRadius", "/docs/use", Pages.BorderRadius.BorderRadiusView()
-        | TextAlign -> "TextAlign", "/docs/use", Pages.TextAlign.TextAlignView()
-        | BoxShadow -> "BoxShadow", "/docs/use", Pages.BoxShadow.BoxShadowView()
+        | Page.Install -> "Installation", "/docs/install", Pages.Install.InstallView()
+        | Page.Use -> "How to use", "/docs/use", Pages.Use.UseView()
+        | Page.BorderRadius -> "BorderRadius", "/docs/use", Pages.BorderRadius.BorderRadiusView()
+        | Page.TextAlign -> "TextAlign", "/docs/use", Pages.TextAlign.TextAlignView()
+        | Page.BoxShadow -> "BoxShadow", "/docs/use", Pages.BoxShadow.BoxShadowView()
 
     React.router [
         router.hashMode
