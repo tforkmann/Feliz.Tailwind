@@ -118,6 +118,7 @@ let private leftSide (p: Page) =
                         mi "Install" Install
                         mi "Use" Use
                         mi "BorderRadius" BorderRadius
+                        mi "TextAlign" TextAlign
                         ]
                 ]
             ]
@@ -152,6 +153,7 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         | Install -> "Installation", "/docs/install", Pages.Install.InstallView()
         | Use -> "How to use", "/docs/use", Pages.Use.UseView()
         | BorderRadius -> "BorderRadius", "/docs/use", Pages.BorderRadius.BorderRadiusView()
+        | TextAlign -> "TextAlign", "/docs/use", Pages.TextAlign.TextAlignView()
 
     React.router [
         router.hashMode
