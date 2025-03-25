@@ -9,6 +9,7 @@ console.log("Proxying to " + proxyTarget);
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react(),tailwindcss()],
+    root: "./src/Docs",
     build: {
         outDir:"../../publish/docs",
         emptyOutDir: true,
