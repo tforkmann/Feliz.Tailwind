@@ -8,6 +8,7 @@
         <Compile Include="SharedView.fs" />
         <Compile Include="Pages\Install.fs" />
         <Compile Include="Pages\Use.fs" />
+        <Compile Include="Pages\BoxShadow.fs" />
         <Compile Include="Pages\BorderRadius.fs" />
         <Compile Include="Pages\TextAlign.fs" />
         <Compile Include="View.fs" />

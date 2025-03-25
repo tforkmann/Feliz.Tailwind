@@ -8,6 +8,7 @@ type Page =
     | Install
     | Use
     | BorderRadius
+    | BoxShadow
     | TextAlign
 
 [<RequireQualifiedAccess>]
@@ -18,6 +19,7 @@ module Page =
         function
         | [ "use" ] -> Page.Use
         | [ "borderradius" ] -> Page.BorderRadius
+        | [ "boxshadow" ] -> Page.BoxShadow
         | [ "textalign" ] -> Page.TextAlign
         | [] -> Page.Install
         | _ -> defaultPage
@@ -29,6 +31,7 @@ module Page =
         | Page.Install -> [] |> noQueryString
         | Page.Use -> [ "use" ] |> noQueryString
         | Page.BorderRadius -> [ "borderradius" ] |> noQueryString
+        | Page.BoxShadow -> [ "boxshadow" ] |> noQueryString
         | Page.TextAlign -> [ "textalign" ] |> noQueryString
 
 

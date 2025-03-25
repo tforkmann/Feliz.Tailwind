@@ -171,7 +171,7 @@ NUGET
       Fable.Elmish (>= 4.0)
       Feliz (>= 2.3)
       FSharp.Core (>= 4.7.2)
-    Feliz.Tailwind (3.0.5)
+    Feliz.Tailwind (3.0.6)
       Feliz (>= 2.9)
     Feliz.UseElmish (2.5)
       Fable.Elmish (>= 4.0)

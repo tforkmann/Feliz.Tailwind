@@ -22,10 +22,10 @@ let clean proj = [ proj </> "bin"; proj </> "obj" ] |> Shell.cleanDirs
 
 Target.create "InstallClient" (fun _ ->
     printfn "Node version:"
-    Tools.node "--version" docsSrcPath
+    Tools.node "--version" "."
     printfn "Npm version:"
-    Tools.npm "--version" docsSrcPath
-    Tools.npm "install" docsSrcPath
+    Tools.npm "--version" "."
+    Tools.npm "install" "."
 )
 
 let createNuget proj =

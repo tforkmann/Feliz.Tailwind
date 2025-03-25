@@ -173,6 +173,8 @@ type borderWidth =
 
 [<Erase>]
 type boxShadow =
+    static member inline shadow2Xs = prop.className "shadow-2xs"
+    static member inline shadowXs = prop.className "shadow-xs"
     static member inline shadowSm = prop.className "shadow-sm"
     static member inline shadow = prop.className "shadow"
     static member inline shadowMd = prop.className "shadow-md"

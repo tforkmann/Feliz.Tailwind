@@ -65,8 +65,8 @@ let private leftSide (p: Page) =
                 prop.href mp
                 prop.onClick Router.goToUrl
                 if p = mp then
-                    (menuItem.active
-                     ++ prop.className "justify-between")
+                    menuItem.active
+                    ++ prop.className "justify-between"
                 else
                     prop.className "justify-between"
                 prop.children [
@@ -118,6 +118,7 @@ let private leftSide (p: Page) =
                         mi "Install" Install
                         mi "Use" Use
                         mi "BorderRadius" BorderRadius
+                        mi "BoxShadow" BoxShadow
                         mi "TextAlign" TextAlign
                         ]
                 ]
@@ -154,6 +155,7 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         | Use -> "How to use", "/docs/use", Pages.Use.UseView()
         | BorderRadius -> "BorderRadius", "/docs/use", Pages.BorderRadius.BorderRadiusView()
         | TextAlign -> "TextAlign", "/docs/use", Pages.TextAlign.TextAlignView()
+        | BoxShadow -> "BoxShadow", "/docs/use", Pages.BoxShadow.BoxShadowView()
 
     React.router [
         router.hashMode
