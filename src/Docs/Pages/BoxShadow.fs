@@ -50,13 +50,12 @@ let renderBoxShadow boxShadow =
                 prop.text (str boxShadow) ]
 
     let code =
-        $"""Tailwind.divCombine
-            [ Daisy.button.button
-                  [ button.outline
+        $"""Daisy.button.button
+                [   button.outline
                     button.primary
                     button.lg
                     {str boxShadow}
-                    prop.text "This is {str boxShadow}" ] ]"""
+                    prop.text "This is {str boxShadow}" ]"""
 
     let title = Html.text "Use of borderRadius is rather straightforward."
     codedView title code example

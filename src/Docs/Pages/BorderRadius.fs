@@ -8,50 +8,43 @@ open Feliz.Tailwind
 open Feliz.Tailwind.Operators
 open Docs.SharedView
 
-let borderRadiusStyles =
-    [ borderRadius.roundedNone
-      borderRadius.roundedSm
-      borderRadius.roundedMd
-      borderRadius.roundedLg
-      borderRadius.roundedXl
-      borderRadius.rounded2Xl
-      borderRadius.rounded3Xl ]
+let borderRadiusStyles = [
+    borderRadius.roundedNone
+    borderRadius.roundedSm
+    borderRadius.roundedMd
+    borderRadius.roundedLg
+    borderRadius.roundedXl
+    borderRadius.rounded2Xl
+    borderRadius.rounded3Xl
+]
 
 let str prop =
-    if prop = borderRadius.roundedNone then
-        "rounded-none"
-    elif prop = borderRadius.roundedSm then
-        "rounded-sm"
-    elif prop = borderRadius.roundedMd then
-        "rounded-md"
-    elif prop = borderRadius.roundedLg then
-        "rounded-lg"
-    elif prop = borderRadius.roundedXl then
-        "rounded-xl"
-    elif prop = borderRadius.rounded2Xl then
-        "rounded-2xl"
-    elif prop = borderRadius.rounded3Xl then
-        "rounded-3xl"
-    else
-        "unknown"
+    if prop = borderRadius.roundedNone then "rounded-none"
+    elif prop = borderRadius.roundedSm then "rounded-sm"
+    elif prop = borderRadius.roundedMd then "rounded-md"
+    elif prop = borderRadius.roundedLg then "rounded-lg"
+    elif prop = borderRadius.roundedXl then "rounded-xl"
+    elif prop = borderRadius.rounded2Xl then "rounded-2xl"
+    elif prop = borderRadius.rounded3Xl then "rounded-3xl"
+    else "unknown"
+
 let renderBorderRadius borderRadius =
     let example =
-        Tailwind.divCombine
-            [ Daisy.button.button
-                  [ button.outline
-                    button.primary
-                    button.lg
-                    borderRadius
-                    prop.text (str borderRadius) ] ]
+        Daisy.button.button [
+            button.outline
+            button.primary
+            button.lg
+            borderRadius
+            prop.text (str borderRadius)
+        ]
 
     let code =
-        $"""Tailwind.divCombine
-            [ Daisy.button.button
-                  [ button.outline
-                    button.primary
-                    button.lg
-                    {str borderRadius}
-                    prop.text "This is {str borderRadius}" ] ]"""
+        $"""Daisy.button.button
+            [   button.outline
+                button.primary
+                button.lg
+                {str borderRadius}
+                prop.text "This is {str borderRadius}" ]"""
 
     let title = Html.text "Use of borderRadius is rather straightforward."
     codedView title code example
