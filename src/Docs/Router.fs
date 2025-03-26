@@ -11,6 +11,8 @@ type Page =
     | BorderRadius
     | BoxShadow
     | TextAlign
+    | JustifyContent
+    | JustifyItems
 
 module Page =
     let defaultPage = Page.Install
@@ -21,6 +23,8 @@ module Page =
         | [ "borderradius" ] -> Page.BorderRadius
         | [ "boxshadow" ] -> Page.BoxShadow
         | [ "textalign" ] -> Page.TextAlign
+        | [ "justifycontent" ] -> Page.JustifyContent
+        | [ "justifyitems" ] -> Page.JustifyItems
         | [] -> Page.Install
         | _ -> defaultPage
 
@@ -33,6 +37,8 @@ module Page =
         | Page.BorderRadius -> [ "borderradius" ] |> noQueryString
         | Page.BoxShadow -> [ "boxshadow" ] |> noQueryString
         | Page.TextAlign -> [ "textalign" ] |> noQueryString
+        | Page.JustifyContent -> [ "justifycontent" ] |> noQueryString
+        | Page.JustifyItems -> [ "justifyitems" ] |> noQueryString
 
 
 [<RequireQualifiedAccess>]

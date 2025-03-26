@@ -11,6 +11,8 @@
         <Compile Include="Pages\BoxShadow.fs" />
         <Compile Include="Pages\BorderRadius.fs" />
         <Compile Include="Pages\TextAlign.fs" />
+        <Compile Include="Pages\JustifyContent.fs" />
+        <Compile Include="Pages\JustifyItems.fs" />
         <Compile Include="View.fs" />
         <Compile Include="App.fs" />
         <Content Include="index.html" />

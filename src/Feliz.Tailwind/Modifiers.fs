@@ -315,6 +315,13 @@ type justifyContent =
     static member inline justifyAround = prop.className "justify-around"
     static member inline justifyEvenly = prop.className "justify-evenly"
 
+type justifyItems =
+    static member inline justifyItemsStart = prop.className "justify-items-start"
+    static member inline justifyItemsEnd = prop.className "justify-items-end"
+    static member inline justifyItemsCenter = prop.className "justify-items-center"
+    static member inline justifyItemsStretch = prop.className "justify-items-stretch"
+    static member inline justifyItemsBaseline = prop.className "justify-items-baseline"
+
 [<Erase>]
 type margin =
     static member inline m0 = prop.className "mb-2"
