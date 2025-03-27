@@ -120,6 +120,8 @@ let private leftSide (p: Page) =
                         mi "BorderRadius" Page.BorderRadius
                         mi "BoxShadow" Page.BoxShadow
                         mi "TextAlign" Page.TextAlign
+                        mi "JustifyContent" Page.JustifyContent
+                        mi "JustifyItems" Page.JustifyItems
                         ]
                 ]
             ]
@@ -144,8 +146,6 @@ let private inLayout state dispatch (title: string) (docLink: string) (p: Page) 
         ]
     ]
 
-
-
 [<ReactComponent>]
 let AppView (state: State) (dispatch: Msg -> unit) =
 
@@ -156,6 +156,8 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         | Page.BorderRadius -> "BorderRadius", "/docs/use", Pages.BorderRadius.BorderRadiusView()
         | Page.TextAlign -> "TextAlign", "/docs/use", Pages.TextAlign.TextAlignView()
         | Page.BoxShadow -> "BoxShadow", "/docs/use", Pages.BoxShadow.BoxShadowView()
+        | Page.JustifyContent -> "JustifyContent", "/docs/use", Pages.JustifyContent.JustifyContentView()
+        | Page.JustifyItems -> "JustifyItems", "/docs/use", Pages.JustifyItems.JustifyItemsView()
 
     React.router [
         router.hashMode

@@ -64,7 +64,7 @@ let renderJustifyItems justifyItems =
     codedView title code example
 
 [<ReactComponent>]
-let TextAlignView () =
+let JustifyItemsView () =
     React.fragment [
         for justifyItems in justifyItemsStyles do
             renderJustifyItems justifyItems
