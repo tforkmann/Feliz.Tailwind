@@ -1033,3 +1033,16 @@ type textAlign =
     static member inline justify = prop.className "text-justify"
     static member inline start = prop.className "text-start"
     static member inline ``end`` = prop.className "text-end"
+
+[<Erase>]
+type alignItems
+ =
+    static member inline itemsStart = prop.className "items-start"
+    static member inline itemsEnd = prop.className "items-end"
+    static member inline itemsEndSafe = prop.className "items-end-safe"
+    static member inline itemsCenter = prop.className "items-center"
+    static member inline itemsCenterSafe = prop.className "items-center-safe"
+    static member inline itemsBaseline = prop.className "items-baseline"
+    static member inline itemsBaselineLast = prop.className "items-baseline-last"
+
+    static member inline itemsStretch = prop.className "items-stretch"

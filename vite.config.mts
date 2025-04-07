@@ -7,7 +7,7 @@ const proxyTarget = process.env.services__server__http__0 || "http://localhost:5
 const port = process.env.PORT ? parseInt(process.env.PORT) : 8080;
 console.log("Proxying to " + proxyTarget);
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode, ssrBuild }) => {
+export default defineConfig(({ command, mode, isSsrBuild, isPreview  }) => {
     var isDev = command === 'serve'
     return {
         plugins: [react(), tailwindcss()],
