@@ -1035,8 +1035,7 @@ type textAlign =
     static member inline ``end`` = prop.className "text-end"
 
 [<Erase>]
-type alignItems
- =
+type alignItems =
     static member inline itemsStart = prop.className "items-start"
     static member inline itemsEnd = prop.className "items-end"
     static member inline itemsEndSafe = prop.className "items-end-safe"
