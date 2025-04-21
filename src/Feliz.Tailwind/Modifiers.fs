@@ -203,6 +203,11 @@ type flex =
     static member inline flexNone = prop.className "flex-none"
     static  member inline flexRow = prop.className "flex-row"
     static member inline flexWrap = prop.className "flex-wrap"
+    static member inline flexWrapReverse = prop.className "flex-wrap-reverse"
+    static member inline flexNoWrap = prop.className "flex-nowrap"
+    static member inline flexCol = prop.className "flex-col"
+
+
 [<Erase>]
 type flexDirection =
     static member inline flexRow = prop.className "flex-row"

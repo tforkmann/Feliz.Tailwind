@@ -13,6 +13,7 @@
         <Compile Include="Pages\TextAlign.fs" />
         <Compile Include="Pages\JustifyContent.fs" />
         <Compile Include="Pages\JustifyItems.fs" />
+        <Compile Include="Pages\FontSize.fs" />
         <Compile Include="View.fs" />
         <Compile Include="App.fs" />
         <Content Include="index.html" />

@@ -102,6 +102,7 @@ let private leftSide (p: Page) =
                         mi "TextAlign" Page.TextAlign
                         mi "JustifyContent" Page.JustifyContent
                         mi "JustifyItems" Page.JustifyItems
+                        mi "FontSize" Page.FontSize
                         ]
                 ]
             ]
@@ -138,6 +139,7 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         | Page.BoxShadow -> "BoxShadow", "/docs/use", Pages.BoxShadow.BoxShadowView()
         | Page.JustifyContent -> "JustifyContent", "/docs/use", Pages.JustifyContent.JustifyContentView()
         | Page.JustifyItems -> "JustifyItems", "/docs/use", Pages.JustifyItems.JustifyItemsView()
+        | Page.FontSize -> "FontSize", "/docs/use", Pages.FontSize.FontSizeView()
 
     React.router [
         router.hashMode

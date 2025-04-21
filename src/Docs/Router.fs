@@ -13,6 +13,7 @@ type Page =
     | TextAlign
     | JustifyContent
     | JustifyItems
+    | FontSize
 
 module Page =
     let defaultPage = Page.Install
@@ -25,6 +26,7 @@ module Page =
         | [ "textalign" ] -> Page.TextAlign
         | [ "justifycontent" ] -> Page.JustifyContent
         | [ "justifyitems" ] -> Page.JustifyItems
+        | [ "fontsize" ] -> Page.FontSize
         | [] -> Page.Install
         | _ -> defaultPage
 
@@ -39,7 +41,7 @@ module Page =
         | Page.TextAlign -> [ "textalign" ] |> noQueryString
         | Page.JustifyContent -> [ "justifycontent" ] |> noQueryString
         | Page.JustifyItems -> [ "justifyitems" ] |> noQueryString
-
+        | Page.FontSize -> [ "fontsize" ] |> noQueryString
 
 [<RequireQualifiedAccess>]
 module Router =
