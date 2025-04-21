@@ -40,14 +40,14 @@ let str prop =
     elif prop = fontSize.text9Xl then "text-9xl"
     else "unknown"
 
-let renderBorderRadius borderRadius =
+let renderFontSize fontSize =
     let example =
         Daisy.button.button [
             button.outline
             button.primary
             button.lg
-            borderRadius
-            prop.text (str borderRadius)
+            fontSize
+            prop.text (str fontSize)
         ]
 
     let code =
@@ -55,15 +55,15 @@ let renderBorderRadius borderRadius =
             [   button.outline
                 button.primary
                 button.lg
-                {str borderRadius}
-                prop.text "This is {str borderRadius}" ]"""
+                {str fontSize}
+                prop.text "This is {str fontSize}" ]"""
 
-    let title = Html.text "Use of borderRadius is rather straightforward."
+    let title = Html.text "Use of fontSize is rather straightforward."
     codedView title code example
 
 [<ReactComponent>]
 let FontSizeView () =
     React.fragment [
         for fontSize in fontSizeStyles do
-            renderBorderRadius fontSize
+            renderFontSize fontSize
     ]
