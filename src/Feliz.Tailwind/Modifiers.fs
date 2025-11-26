@@ -216,6 +216,16 @@ type flexDirection =
     static member inline flexColReserve = prop.className "flex-col-reserve"
 
 [<Erase>]
+type flexShrink =
+    static member inline flexShrink = prop.className "flex-shrink"
+    static member inline flexShrink0 = prop.className "flex-shrink-0"
+
+[<Erase>]
+type flexGrow =
+    static member inline flexGrow = prop.className "flex-grow"
+    static member inline flexGrow0 = prop.className "flex-grow-0"
+
+[<Erase>]
 type fontSize =
     static member inline textXs = prop.className "text-xs"
     static member inline textSm = prop.className "text-sm"
