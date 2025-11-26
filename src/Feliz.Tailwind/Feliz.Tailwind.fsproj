@@ -10,8 +10,8 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageTags>fsharp;fable;tailwindcss;feliz;Tailwind</PackageTags>
         <Authors>Tim Forkmann</Authors>
-        <Version>3.0.9</Version>
-        <PackageReleaseNotes>Update packages</PackageReleaseNotes>
+        <Version>3.1.0</Version>
+        <PackageReleaseNotes>Add flexShrink and flexGrow helper types for flex layout utilities</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Modifiers.fs" />
