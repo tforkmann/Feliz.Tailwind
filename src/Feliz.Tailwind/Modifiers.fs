@@ -588,6 +588,7 @@ type margin =
     static member inline mtAuto = prop.className "mt-auto"
     static member inline mrAuto = prop.className "mr-auto"
     static member inline mbAuto = prop.className "mb-auto"
+    static member inline mlAuto = prop.className "ml-auto"
 
 
 [<Erase>]
