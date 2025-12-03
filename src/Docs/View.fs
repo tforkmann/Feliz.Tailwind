@@ -97,12 +97,30 @@ let private leftSide (p: Page) =
                         Daisy.menuTitle [ Html.span "Docs" ]
                         mi "Install" Page.Install
                         mi "Use" Page.Use
-                        mi "BorderRadius" Page.BorderRadius
-                        mi "BoxShadow" Page.BoxShadow
-                        mi "TextAlign" Page.TextAlign
+                        Daisy.menuTitle [ Html.span "Layout" ]
+                        mi "Display" Page.Display
+                        mi "Overflow" Page.Overflow
+                        mi "Position" Page.Position
+                        mi "ZIndex" Page.ZIndex
+                        Daisy.menuTitle [ Html.span "Flexbox & Grid" ]
+                        mi "AlignItems" Page.AlignItems
+                        mi "FlexDirection" Page.FlexDirection
                         mi "JustifyContent" Page.JustifyContent
                         mi "JustifyItems" Page.JustifyItems
+                        Daisy.menuTitle [ Html.span "Spacing" ]
+                        mi "Margin" Page.Margin
+                        mi "Padding" Page.Padding
+                        Daisy.menuTitle [ Html.span "Sizing" ]
+                        mi "Width" Page.Width
+                        mi "Height" Page.Height
+                        Daisy.menuTitle [ Html.span "Typography" ]
                         mi "FontSize" Page.FontSize
+                        mi "TextAlign" Page.TextAlign
+                        Daisy.menuTitle [ Html.span "Borders" ]
+                        mi "BorderRadius" Page.BorderRadius
+                        Daisy.menuTitle [ Html.span "Effects" ]
+                        mi "BoxShadow" Page.BoxShadow
+                        mi "Opacity" Page.Opacity
                         ]
                 ]
             ]
@@ -134,12 +152,23 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         match state.Page with
         | Page.Install -> "Installation", "/docs/install", Pages.Install.InstallView()
         | Page.Use -> "How to use", "/docs/use", Pages.Use.UseView()
-        | Page.BorderRadius -> "BorderRadius", "/docs/use", Pages.BorderRadius.BorderRadiusView()
-        | Page.TextAlign -> "TextAlign", "/docs/use", Pages.TextAlign.TextAlignView()
-        | Page.BoxShadow -> "BoxShadow", "/docs/use", Pages.BoxShadow.BoxShadowView()
-        | Page.JustifyContent -> "JustifyContent", "/docs/use", Pages.JustifyContent.JustifyContentView()
-        | Page.JustifyItems -> "JustifyItems", "/docs/use", Pages.JustifyItems.JustifyItemsView()
-        | Page.FontSize -> "FontSize", "/docs/use", Pages.FontSize.FontSizeView()
+        | Page.AlignItems -> "AlignItems", "/docs/alignitems", Pages.AlignItems.AlignItemsView()
+        | Page.BorderRadius -> "BorderRadius", "/docs/borderradius", Pages.BorderRadius.BorderRadiusView()
+        | Page.BoxShadow -> "BoxShadow", "/docs/boxshadow", Pages.BoxShadow.BoxShadowView()
+        | Page.Display -> "Display", "/docs/display", Pages.Display.DisplayView()
+        | Page.FlexDirection -> "FlexDirection", "/docs/flexdirection", Pages.FlexDirection.FlexDirectionView()
+        | Page.FontSize -> "FontSize", "/docs/fontsize", Pages.FontSize.FontSizeView()
+        | Page.Height -> "Height", "/docs/height", Pages.Height.HeightView()
+        | Page.JustifyContent -> "JustifyContent", "/docs/justifycontent", Pages.JustifyContent.JustifyContentView()
+        | Page.JustifyItems -> "JustifyItems", "/docs/justifyitems", Pages.JustifyItems.JustifyItemsView()
+        | Page.Margin -> "Margin", "/docs/margin", Pages.Margin.MarginView()
+        | Page.Opacity -> "Opacity", "/docs/opacity", Pages.Opacity.OpacityView()
+        | Page.Overflow -> "Overflow", "/docs/overflow", Pages.Overflow.OverflowView()
+        | Page.Padding -> "Padding", "/docs/padding", Pages.Padding.PaddingView()
+        | Page.Position -> "Position", "/docs/position", Pages.Position.PositionView()
+        | Page.TextAlign -> "TextAlign", "/docs/textalign", Pages.TextAlign.TextAlignView()
+        | Page.Width -> "Width", "/docs/width", Pages.Width.WidthView()
+        | Page.ZIndex -> "ZIndex", "/docs/zindex", Pages.ZIndex.ZIndexView()
 
     React.router [
         router.hashMode
