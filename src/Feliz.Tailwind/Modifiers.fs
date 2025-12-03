@@ -193,6 +193,24 @@ type display =
     static member inline inline' = prop.className "inline"
     /// Display box with `flex`
     static member inline flex = prop.className "flex"
+    /// Display box with `inline-flex`
+    static member inline inlineFlex = prop.className "inline-flex"
+    /// Display box with `grid`
+    static member inline grid = prop.className "grid"
+    /// Display box with `inline-grid`
+    static member inline inlineGrid = prop.className "inline-grid"
+    /// Display box with `hidden`
+    static member inline hidden = prop.className "hidden"
+    /// Display box with `contents`
+    static member inline contents = prop.className "contents"
+    /// Display box with `flow-root`
+    static member inline flowRoot = prop.className "flow-root"
+    /// Display box with `table`
+    static member inline table = prop.className "table"
+    /// Display box with `table-row`
+    static member inline tableRow = prop.className "table-row"
+    /// Display box with `table-cell`
+    static member inline tableCell = prop.className "table-cell"
 
 [<Erase>]
 type flex =
@@ -916,28 +934,117 @@ type padding =
     static member inline p2 = prop.className "p-2"
     static member inline p3 = prop.className "p-3"
     static member inline p4 = prop.className "p-4"
+    static member inline p5 = prop.className "p-5"
+    static member inline p6 = prop.className "p-6"
+    static member inline p7 = prop.className "p-7"
+    static member inline p8 = prop.className "p-8"
+    static member inline p9 = prop.className "p-9"
+    static member inline p10 = prop.className "p-10"
+    static member inline p11 = prop.className "p-11"
+    static member inline p12 = prop.className "p-12"
+    static member inline p14 = prop.className "p-14"
+    static member inline p16 = prop.className "p-16"
+    static member inline p20 = prop.className "p-20"
+    static member inline p24 = prop.className "p-24"
     static member inline pt0 = prop.className "pt-0"
     static member inline pt1 = prop.className "pt-1"
     static member inline pt2 = prop.className "pt-2"
     static member inline pt3 = prop.className "pt-3"
     static member inline pt4 = prop.className "pt-4"
+    static member inline pt5 = prop.className "pt-5"
+    static member inline pt6 = prop.className "pt-6"
+    static member inline pt8 = prop.className "pt-8"
+    static member inline pb0 = prop.className "pb-0"
+    static member inline pb1 = prop.className "pb-1"
     static member inline pb2 = prop.className "pb-2"
+    static member inline pb3 = prop.className "pb-3"
+    static member inline pb4 = prop.className "pb-4"
+    static member inline pb5 = prop.className "pb-5"
+    static member inline pb6 = prop.className "pb-6"
+    static member inline pb8 = prop.className "pb-8"
+    static member inline pr0 = prop.className "pr-0"
+    static member inline pr1 = prop.className "pr-1"
+    static member inline pr2 = prop.className "pr-2"
+    static member inline pr3 = prop.className "pr-3"
+    static member inline pr4 = prop.className "pr-4"
+    static member inline pr5 = prop.className "pr-5"
+    static member inline pr6 = prop.className "pr-6"
+    static member inline pr8 = prop.className "pr-8"
+    static member inline pl0 = prop.className "pl-0"
+    static member inline pl1 = prop.className "pl-1"
+    static member inline pl2 = prop.className "pl-2"
+    static member inline pl3 = prop.className "pl-3"
+    static member inline pl4 = prop.className "pl-4"
+    static member inline pl5 = prop.className "pl-5"
+    static member inline pl6 = prop.className "pl-6"
+    static member inline pl8 = prop.className "pl-8"
+    static member inline px0 = prop.className "px-0"
     static member inline px1 = prop.className "px-1"
     static member inline px2 = prop.className "px-2"
     static member inline px3 = prop.className "px-3"
     static member inline px4 = prop.className "px-4"
     static member inline px5 = prop.className "px-5"
+    static member inline px6 = prop.className "px-6"
+    static member inline px8 = prop.className "px-8"
+    static member inline py0 = prop.className "py-0"
     static member inline py1 = prop.className "py-1"
     static member inline py2 = prop.className "py-2"
     static member inline py3 = prop.className "py-3"
     static member inline py4 = prop.className "py-4"
     static member inline py5 = prop.className "py-5"
+    static member inline py6 = prop.className "py-6"
+    static member inline py8 = prop.className "py-8"
 
 [<Erase>]
-type postion =
+type position =
     static member inline absolute = prop.className "absolute"
     static member inline relative = prop.className "relative"
     static member inline sticky = prop.className "sticky"
+    static member inline fixed' = prop.className "fixed"
+    static member inline static' = prop.className "static"
+    // Inset
+    static member inline inset0 = prop.className "inset-0"
+    static member inline insetAuto = prop.className "inset-auto"
+    static member inline insetX0 = prop.className "inset-x-0"
+    static member inline insetXAuto = prop.className "inset-x-auto"
+    static member inline insetY0 = prop.className "inset-y-0"
+    static member inline insetYAuto = prop.className "inset-y-auto"
+    // Top
+    static member inline top0 = prop.className "top-0"
+    static member inline top1 = prop.className "top-1"
+    static member inline top2 = prop.className "top-2"
+    static member inline top3 = prop.className "top-3"
+    static member inline top4 = prop.className "top-4"
+    static member inline topAuto = prop.className "top-auto"
+    static member inline topFull = prop.className "top-full"
+    // Right
+    static member inline right0 = prop.className "right-0"
+    static member inline right1 = prop.className "right-1"
+    static member inline right2 = prop.className "right-2"
+    static member inline right3 = prop.className "right-3"
+    static member inline right4 = prop.className "right-4"
+    static member inline rightAuto = prop.className "right-auto"
+    static member inline rightFull = prop.className "right-full"
+    // Bottom
+    static member inline bottom0 = prop.className "bottom-0"
+    static member inline bottom1 = prop.className "bottom-1"
+    static member inline bottom2 = prop.className "bottom-2"
+    static member inline bottom3 = prop.className "bottom-3"
+    static member inline bottom4 = prop.className "bottom-4"
+    static member inline bottomAuto = prop.className "bottom-auto"
+    static member inline bottomFull = prop.className "bottom-full"
+    // Left
+    static member inline left0 = prop.className "left-0"
+    static member inline left1 = prop.className "left-1"
+    static member inline left2 = prop.className "left-2"
+    static member inline left3 = prop.className "left-3"
+    static member inline left4 = prop.className "left-4"
+    static member inline leftAuto = prop.className "left-auto"
+    static member inline leftFull = prop.className "left-full"
+
+/// Legacy alias for position (typo fix)
+[<Erase>]
+type postion = position
 
 [<Erase>]
 type visibility =
@@ -1059,5 +1166,56 @@ type alignItems =
     static member inline itemsCenterSafe = prop.className "items-center-safe"
     static member inline itemsBaseline = prop.className "items-baseline"
     static member inline itemsBaselineLast = prop.className "items-baseline-last"
-
     static member inline itemsStretch = prop.className "items-stretch"
+
+[<Erase>]
+type zIndex =
+    static member inline z0 = prop.className "z-0"
+    static member inline z10 = prop.className "z-10"
+    static member inline z20 = prop.className "z-20"
+    static member inline z30 = prop.className "z-30"
+    static member inline z40 = prop.className "z-40"
+    static member inline z50 = prop.className "z-50"
+    static member inline zAuto = prop.className "z-auto"
+
+[<Erase>]
+type opacity =
+    static member inline opacity0 = prop.className "opacity-0"
+    static member inline opacity5 = prop.className "opacity-5"
+    static member inline opacity10 = prop.className "opacity-10"
+    static member inline opacity15 = prop.className "opacity-15"
+    static member inline opacity20 = prop.className "opacity-20"
+    static member inline opacity25 = prop.className "opacity-25"
+    static member inline opacity30 = prop.className "opacity-30"
+    static member inline opacity35 = prop.className "opacity-35"
+    static member inline opacity40 = prop.className "opacity-40"
+    static member inline opacity45 = prop.className "opacity-45"
+    static member inline opacity50 = prop.className "opacity-50"
+    static member inline opacity55 = prop.className "opacity-55"
+    static member inline opacity60 = prop.className "opacity-60"
+    static member inline opacity65 = prop.className "opacity-65"
+    static member inline opacity70 = prop.className "opacity-70"
+    static member inline opacity75 = prop.className "opacity-75"
+    static member inline opacity80 = prop.className "opacity-80"
+    static member inline opacity85 = prop.className "opacity-85"
+    static member inline opacity90 = prop.className "opacity-90"
+    static member inline opacity95 = prop.className "opacity-95"
+    static member inline opacity100 = prop.className "opacity-100"
+
+[<Erase>]
+type bgOpacity =
+    static member inline bgOpacity0 = prop.className "bg-opacity-0"
+    static member inline bgOpacity5 = prop.className "bg-opacity-5"
+    static member inline bgOpacity10 = prop.className "bg-opacity-10"
+    static member inline bgOpacity20 = prop.className "bg-opacity-20"
+    static member inline bgOpacity25 = prop.className "bg-opacity-25"
+    static member inline bgOpacity30 = prop.className "bg-opacity-30"
+    static member inline bgOpacity40 = prop.className "bg-opacity-40"
+    static member inline bgOpacity50 = prop.className "bg-opacity-50"
+    static member inline bgOpacity60 = prop.className "bg-opacity-60"
+    static member inline bgOpacity70 = prop.className "bg-opacity-70"
+    static member inline bgOpacity75 = prop.className "bg-opacity-75"
+    static member inline bgOpacity80 = prop.className "bg-opacity-80"
+    static member inline bgOpacity90 = prop.className "bg-opacity-90"
+    static member inline bgOpacity95 = prop.className "bg-opacity-95"
+    static member inline bgOpacity100 = prop.className "bg-opacity-100"
