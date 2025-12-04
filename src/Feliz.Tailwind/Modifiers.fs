@@ -1134,6 +1134,28 @@ type grid =
     static member inline ``cols-11`` = prop.className "grid-cols-11"
     static member inline ``cols-12`` = prop.className "grid-cols-12"
     static member inline grid = prop.className "grid"
+    // Grid Column Span
+    static member inline ``col-span-1`` = prop.className "col-span-1"
+    static member inline ``col-span-2`` = prop.className "col-span-2"
+    static member inline ``col-span-3`` = prop.className "col-span-3"
+    static member inline ``col-span-4`` = prop.className "col-span-4"
+    static member inline ``col-span-5`` = prop.className "col-span-5"
+    static member inline ``col-span-6`` = prop.className "col-span-6"
+    static member inline ``col-span-7`` = prop.className "col-span-7"
+    static member inline ``col-span-8`` = prop.className "col-span-8"
+    static member inline ``col-span-9`` = prop.className "col-span-9"
+    static member inline ``col-span-10`` = prop.className "col-span-10"
+    static member inline ``col-span-11`` = prop.className "col-span-11"
+    static member inline ``col-span-12`` = prop.className "col-span-12"
+    static member inline ``col-span-full`` = prop.className "col-span-full"
+    // Grid Row Span
+    static member inline ``row-span-1`` = prop.className "row-span-1"
+    static member inline ``row-span-2`` = prop.className "row-span-2"
+    static member inline ``row-span-3`` = prop.className "row-span-3"
+    static member inline ``row-span-4`` = prop.className "row-span-4"
+    static member inline ``row-span-5`` = prop.className "row-span-5"
+    static member inline ``row-span-6`` = prop.className "row-span-6"
+    static member inline ``row-span-full`` = prop.className "row-span-full"
 
 [<Erase>]
 type gap =
