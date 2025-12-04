@@ -101,10 +101,16 @@ let private leftSide (p: Page) =
                         mi "Display" Page.Display
                         mi "Overflow" Page.Overflow
                         mi "Position" Page.Position
+                        mi "Visibility" Page.Visibility
                         mi "ZIndex" Page.ZIndex
                         Daisy.menuTitle [ Html.span "Flexbox & Grid" ]
                         mi "AlignItems" Page.AlignItems
+                        mi "Flex" Page.Flex
                         mi "FlexDirection" Page.FlexDirection
+                        mi "FlexGrow" Page.FlexGrow
+                        mi "FlexShrink" Page.FlexShrink
+                        mi "Gap" Page.Gap
+                        mi "Grid" Page.Grid
                         mi "JustifyContent" Page.JustifyContent
                         mi "JustifyItems" Page.JustifyItems
                         Daisy.menuTitle [ Html.span "Spacing" ]
@@ -113,11 +119,21 @@ let private leftSide (p: Page) =
                         Daisy.menuTitle [ Html.span "Sizing" ]
                         mi "Width" Page.Width
                         mi "Height" Page.Height
+                        mi "MinHeight" Page.MinHeight
+                        mi "MaxWidth" Page.MaxWidth
+                        mi "MaxHeight" Page.MaxHeight
                         Daisy.menuTitle [ Html.span "Typography" ]
                         mi "FontSize" Page.FontSize
+                        mi "FontWeight" Page.FontWeight
                         mi "TextAlign" Page.TextAlign
+                        mi "TextColor" Page.TextColor
+                        Daisy.menuTitle [ Html.span "Backgrounds" ]
+                        mi "BackgroundColor" Page.BackgroundColor
+                        mi "BgOpacity" Page.BgOpacity
                         Daisy.menuTitle [ Html.span "Borders" ]
                         mi "BorderRadius" Page.BorderRadius
+                        mi "BorderWidth" Page.BorderWidth
+                        mi "Outline" Page.Outline
                         Daisy.menuTitle [ Html.span "Effects" ]
                         mi "BoxShadow" Page.BoxShadow
                         mi "Opacity" Page.Opacity
@@ -153,20 +169,35 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         | Page.Install -> "Installation", "/docs/install", Pages.Install.InstallView()
         | Page.Use -> "How to use", "/docs/use", Pages.Use.UseView()
         | Page.AlignItems -> "AlignItems", "/docs/alignitems", Pages.AlignItems.AlignItemsView()
+        | Page.BackgroundColor -> "BackgroundColor", "/docs/backgroundcolor", Pages.BackgroundColor.BackgroundColorView()
+        | Page.BgOpacity -> "BgOpacity", "/docs/bgopacity", Pages.BgOpacity.BgOpacityView()
         | Page.BorderRadius -> "BorderRadius", "/docs/borderradius", Pages.BorderRadius.BorderRadiusView()
+        | Page.BorderWidth -> "BorderWidth", "/docs/borderwidth", Pages.BorderWidth.BorderWidthView()
         | Page.BoxShadow -> "BoxShadow", "/docs/boxshadow", Pages.BoxShadow.BoxShadowView()
         | Page.Display -> "Display", "/docs/display", Pages.Display.DisplayView()
+        | Page.Flex -> "Flex", "/docs/flex", Pages.Flex.FlexView()
         | Page.FlexDirection -> "FlexDirection", "/docs/flexdirection", Pages.FlexDirection.FlexDirectionView()
+        | Page.FlexGrow -> "FlexGrow", "/docs/flexgrow", Pages.FlexGrow.FlexGrowView()
+        | Page.FlexShrink -> "FlexShrink", "/docs/flexshrink", Pages.FlexShrink.FlexShrinkView()
         | Page.FontSize -> "FontSize", "/docs/fontsize", Pages.FontSize.FontSizeView()
+        | Page.FontWeight -> "FontWeight", "/docs/fontweight", Pages.FontWeight.FontWeightView()
+        | Page.Gap -> "Gap", "/docs/gap", Pages.Gap.GapView()
+        | Page.Grid -> "Grid", "/docs/grid", Pages.Grid.GridView()
         | Page.Height -> "Height", "/docs/height", Pages.Height.HeightView()
         | Page.JustifyContent -> "JustifyContent", "/docs/justifycontent", Pages.JustifyContent.JustifyContentView()
         | Page.JustifyItems -> "JustifyItems", "/docs/justifyitems", Pages.JustifyItems.JustifyItemsView()
         | Page.Margin -> "Margin", "/docs/margin", Pages.Margin.MarginView()
+        | Page.MaxHeight -> "MaxHeight", "/docs/maxheight", Pages.MaxHeight.MaxHeightView()
+        | Page.MaxWidth -> "MaxWidth", "/docs/maxwidth", Pages.MaxWidth.MaxWidthView()
+        | Page.MinHeight -> "MinHeight", "/docs/minheight", Pages.MinHeight.MinHeightView()
         | Page.Opacity -> "Opacity", "/docs/opacity", Pages.Opacity.OpacityView()
+        | Page.Outline -> "Outline", "/docs/outline", Pages.Outline.OutlineView()
         | Page.Overflow -> "Overflow", "/docs/overflow", Pages.Overflow.OverflowView()
         | Page.Padding -> "Padding", "/docs/padding", Pages.Padding.PaddingView()
         | Page.Position -> "Position", "/docs/position", Pages.Position.PositionView()
         | Page.TextAlign -> "TextAlign", "/docs/textalign", Pages.TextAlign.TextAlignView()
+        | Page.TextColor -> "TextColor", "/docs/textcolor", Pages.TextColor.TextColorView()
+        | Page.Visibility -> "Visibility", "/docs/visibility", Pages.Visibility.VisibilityView()
         | Page.Width -> "Width", "/docs/width", Pages.Width.WidthView()
         | Page.ZIndex -> "ZIndex", "/docs/zindex", Pages.ZIndex.ZIndexView()
 
