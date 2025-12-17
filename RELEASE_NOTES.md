@@ -1,4 +1,4 @@
-#### 4.0.0 - 2025-12-05
+#### 4.0.1 - 2025-12-05
 * **Major release with 70+ new Tailwind utility categories**
 * Bug fixes:
   - Fixed `textColor` - all colors now have correct hyphens (e.g., `text-slate-50` instead of `text-slate50`)
