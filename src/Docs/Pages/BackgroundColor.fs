@@ -7,40 +7,35 @@ open Feliz.Tailwind.Operators
 open Docs.SharedView
 
 let backgroundColorStyles = [
-    backgroundColor.bgBlack
-    backgroundColor.bgWhite
-    backgroundColor.bgRed500
-    backgroundColor.bgOrange500
-    backgroundColor.bgYellow500
-    backgroundColor.bgGreen500
-    backgroundColor.bgBlue500
-    backgroundColor.bgSlate500
+    backgroundColor.bgBlack, "backgroundColor.bgBlack"
+    backgroundColor.bgWhite, "backgroundColor.bgWhite"
+    backgroundColor.bgSlate500, "backgroundColor.bgSlate500"
+    backgroundColor.bgRed500, "backgroundColor.bgRed500"
+    backgroundColor.bgOrange500, "backgroundColor.bgOrange500"
+    backgroundColor.bgAmber500, "backgroundColor.bgAmber500"
+    backgroundColor.bgYellow500, "backgroundColor.bgYellow500"
+    backgroundColor.bgLime500, "backgroundColor.bgLime500"
+    backgroundColor.bgGreen500, "backgroundColor.bgGreen500"
+    backgroundColor.bgEmerald500, "backgroundColor.bgEmerald500"
+    backgroundColor.bgTeal500, "backgroundColor.bgTeal500"
+    backgroundColor.bgCyan500, "backgroundColor.bgCyan500"
+    backgroundColor.bgSky500, "backgroundColor.bgSky500"
+    backgroundColor.bgBlue500, "backgroundColor.bgBlue500"
 ]
 
-let str prop =
-    if prop = backgroundColor.bgBlack then "backgroundColor.bgBlack"
-    elif prop = backgroundColor.bgWhite then "backgroundColor.bgWhite"
-    elif prop = backgroundColor.bgRed500 then "backgroundColor.bgRed500"
-    elif prop = backgroundColor.bgOrange500 then "backgroundColor.bgOrange500"
-    elif prop = backgroundColor.bgYellow500 then "backgroundColor.bgYellow500"
-    elif prop = backgroundColor.bgGreen500 then "backgroundColor.bgGreen500"
-    elif prop = backgroundColor.bgBlue500 then "backgroundColor.bgBlue500"
-    elif prop = backgroundColor.bgSlate500 then "backgroundColor.bgSlate500"
-    else "unknown"
-
-let renderBackgroundColor bgColor =
+let renderBackgroundColor (bgColor, name: string) =
     let example =
         Tailwind.divCombine [
             bgColor
             prop.className "p-4 text-white"
-            prop.text (str bgColor)
+            prop.text name
         ]
 
     let code =
         $"""Tailwind.divCombine [
-    {str bgColor}
+    {name}
     prop.className "p-4 text-white"
-    prop.text "{str bgColor}"
+    prop.text "{name}"
 ]"""
 
     let title =
@@ -50,7 +45,24 @@ let renderBackgroundColor bgColor =
 
 [<ReactComponent>]
 let BackgroundColorView () =
-    React.fragment [
-        for bgColor in backgroundColorStyles do
-            renderBackgroundColor bgColor
+    Html.div [
+        prop.className "space-y-4"
+        prop.children [
+            Html.div [
+                prop.className "p-4 bg-blue-50 rounded-lg mb-6"
+                prop.children [
+                    Html.h3 [
+                        prop.className "font-bold text-lg mb-2"
+                        prop.text "New in v4.0.2: Complete Color Palette"
+                    ]
+                    Html.p [
+                        prop.text "This release adds all missing Tailwind colors: Gray, Zinc, Neutral, Stone, Indigo, Violet, Purple, Fuchsia, Pink, Rose + special values (bgInherit, bgCurrent, bgTransparent). Total: 247 background colors!"
+                    ]
+                ]
+            ]
+            React.fragment [
+                for style in backgroundColorStyles do
+                    renderBackgroundColor style
+            ]
+        ]
     ]
