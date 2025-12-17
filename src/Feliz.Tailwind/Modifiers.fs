@@ -5,9 +5,79 @@ open Fable.Core
 
 [<Erase>]
 type backgroundColor =
+    // Special values
+    static member inline bgInherit = prop.className "bg-inherit"
+    static member inline bgCurrent = prop.className "bg-current"
+    static member inline bgTransparent = prop.className "bg-transparent"
     static member inline bgBlack = prop.className "bg-black"
     static member inline bgWhite = prop.className "bg-white"
 
+    // Slate
+    static member inline bgSlate50 = prop.className "bg-slate-50"
+    static member inline bgSlate100 = prop.className "bg-slate-100"
+    static member inline bgSlate200 = prop.className "bg-slate-200"
+    static member inline bgSlate300 = prop.className "bg-slate-300"
+    static member inline bgSlate400 = prop.className "bg-slate-400"
+    static member inline bgSlate500 = prop.className "bg-slate-500"
+    static member inline bgSlate600 = prop.className "bg-slate-600"
+    static member inline bgSlate700 = prop.className "bg-slate-700"
+    static member inline bgSlate800 = prop.className "bg-slate-800"
+    static member inline bgSlate900 = prop.className "bg-slate-900"
+    static member inline bgSlate950 = prop.className "bg-slate-950"
+
+    // Gray
+    static member inline bgGray50 = prop.className "bg-gray-50"
+    static member inline bgGray100 = prop.className "bg-gray-100"
+    static member inline bgGray200 = prop.className "bg-gray-200"
+    static member inline bgGray300 = prop.className "bg-gray-300"
+    static member inline bgGray400 = prop.className "bg-gray-400"
+    static member inline bgGray500 = prop.className "bg-gray-500"
+    static member inline bgGray600 = prop.className "bg-gray-600"
+    static member inline bgGray700 = prop.className "bg-gray-700"
+    static member inline bgGray800 = prop.className "bg-gray-800"
+    static member inline bgGray900 = prop.className "bg-gray-900"
+    static member inline bgGray950 = prop.className "bg-gray-950"
+
+    // Zinc
+    static member inline bgZinc50 = prop.className "bg-zinc-50"
+    static member inline bgZinc100 = prop.className "bg-zinc-100"
+    static member inline bgZinc200 = prop.className "bg-zinc-200"
+    static member inline bgZinc300 = prop.className "bg-zinc-300"
+    static member inline bgZinc400 = prop.className "bg-zinc-400"
+    static member inline bgZinc500 = prop.className "bg-zinc-500"
+    static member inline bgZinc600 = prop.className "bg-zinc-600"
+    static member inline bgZinc700 = prop.className "bg-zinc-700"
+    static member inline bgZinc800 = prop.className "bg-zinc-800"
+    static member inline bgZinc900 = prop.className "bg-zinc-900"
+    static member inline bgZinc950 = prop.className "bg-zinc-950"
+
+    // Neutral
+    static member inline bgNeutral50 = prop.className "bg-neutral-50"
+    static member inline bgNeutral100 = prop.className "bg-neutral-100"
+    static member inline bgNeutral200 = prop.className "bg-neutral-200"
+    static member inline bgNeutral300 = prop.className "bg-neutral-300"
+    static member inline bgNeutral400 = prop.className "bg-neutral-400"
+    static member inline bgNeutral500 = prop.className "bg-neutral-500"
+    static member inline bgNeutral600 = prop.className "bg-neutral-600"
+    static member inline bgNeutral700 = prop.className "bg-neutral-700"
+    static member inline bgNeutral800 = prop.className "bg-neutral-800"
+    static member inline bgNeutral900 = prop.className "bg-neutral-900"
+    static member inline bgNeutral950 = prop.className "bg-neutral-950"
+
+    // Stone
+    static member inline bgStone50 = prop.className "bg-stone-50"
+    static member inline bgStone100 = prop.className "bg-stone-100"
+    static member inline bgStone200 = prop.className "bg-stone-200"
+    static member inline bgStone300 = prop.className "bg-stone-300"
+    static member inline bgStone400 = prop.className "bg-stone-400"
+    static member inline bgStone500 = prop.className "bg-stone-500"
+    static member inline bgStone600 = prop.className "bg-stone-600"
+    static member inline bgStone700 = prop.className "bg-stone-700"
+    static member inline bgStone800 = prop.className "bg-stone-800"
+    static member inline bgStone900 = prop.className "bg-stone-900"
+    static member inline bgStone950 = prop.className "bg-stone-950"
+
+    // Red
     static member inline bgRed50 = prop.className "bg-red-50"
     static member inline bgRed100 = prop.className "bg-red-100"
     static member inline bgRed200 = prop.className "bg-red-200"
@@ -19,6 +89,8 @@ type backgroundColor =
     static member inline bgRed800 = prop.className "bg-red-800"
     static member inline bgRed900 = prop.className "bg-red-900"
     static member inline bgRed950 = prop.className "bg-red-950"
+
+    // Orange
     static member inline bgOrange50 = prop.className "bg-orange-50"
     static member inline bgOrange100 = prop.className "bg-orange-100"
     static member inline bgOrange200 = prop.className "bg-orange-200"
@@ -30,6 +102,8 @@ type backgroundColor =
     static member inline bgOrange800 = prop.className "bg-orange-800"
     static member inline bgOrange900 = prop.className "bg-orange-900"
     static member inline bgOrange950 = prop.className "bg-orange-950"
+
+    // Amber
     static member inline bgAmber50 = prop.className "bg-amber-50"
     static member inline bgAmber100 = prop.className "bg-amber-100"
     static member inline bgAmber200 = prop.className "bg-amber-200"
@@ -41,6 +115,8 @@ type backgroundColor =
     static member inline bgAmber800 = prop.className "bg-amber-800"
     static member inline bgAmber900 = prop.className "bg-amber-900"
     static member inline bgAmber950 = prop.className "bg-amber-950"
+
+    // Yellow
     static member inline bgYellow50 = prop.className "bg-yellow-50"
     static member inline bgYellow100 = prop.className "bg-yellow-100"
     static member inline bgYellow200 = prop.className "bg-yellow-200"
@@ -52,6 +128,8 @@ type backgroundColor =
     static member inline bgYellow800 = prop.className "bg-yellow-800"
     static member inline bgYellow900 = prop.className "bg-yellow-900"
     static member inline bgYellow950 = prop.className "bg-yellow-950"
+
+    // Lime
     static member inline bgLime50 = prop.className "bg-lime-50"
     static member inline bgLime100 = prop.className "bg-lime-100"
     static member inline bgLime200 = prop.className "bg-lime-200"
@@ -63,18 +141,21 @@ type backgroundColor =
     static member inline bgLime800 = prop.className "bg-lime-800"
     static member inline bgLime900 = prop.className "bg-lime-900"
     static member inline bgLime950 = prop.className "bg-lime-950"
+
+    // Green
     static member inline bgGreen50 = prop.className "bg-green-50"
     static member inline bgGreen100 = prop.className "bg-green-100"
     static member inline bgGreen200 = prop.className "bg-green-200"
     static member inline bgGreen300 = prop.className "bg-green-300"
     static member inline bgGreen400 = prop.className "bg-green-400"
-
     static member inline bgGreen500 = prop.className "bg-green-500"
     static member inline bgGreen600 = prop.className "bg-green-600"
     static member inline bgGreen700 = prop.className "bg-green-700"
     static member inline bgGreen800 = prop.className "bg-green-800"
     static member inline bgGreen900 = prop.className "bg-green-900"
     static member inline bgGreen950 = prop.className "bg-green-950"
+
+    // Emerald
     static member inline bgEmerald50 = prop.className "bg-emerald-50"
     static member inline bgEmerald100 = prop.className "bg-emerald-100"
     static member inline bgEmerald200 = prop.className "bg-emerald-200"
@@ -86,6 +167,8 @@ type backgroundColor =
     static member inline bgEmerald800 = prop.className "bg-emerald-800"
     static member inline bgEmerald900 = prop.className "bg-emerald-900"
     static member inline bgEmerald950 = prop.className "bg-emerald-950"
+
+    // Teal
     static member inline bgTeal50 = prop.className "bg-teal-50"
     static member inline bgTeal100 = prop.className "bg-teal-100"
     static member inline bgTeal200 = prop.className "bg-teal-200"
@@ -97,10 +180,11 @@ type backgroundColor =
     static member inline bgTeal800 = prop.className "bg-teal-800"
     static member inline bgTeal900 = prop.className "bg-teal-900"
     static member inline bgTeal950 = prop.className "bg-teal-950"
+
+    // Cyan
     static member inline bgCyan50 = prop.className "bg-cyan-50"
     static member inline bgCyan100 = prop.className "bg-cyan-100"
     static member inline bgCyan200 = prop.className "bg-cyan-200"
-
     static member inline bgCyan300 = prop.className "bg-cyan-300"
     static member inline bgCyan400 = prop.className "bg-cyan-400"
     static member inline bgCyan500 = prop.className "bg-cyan-500"
@@ -109,18 +193,21 @@ type backgroundColor =
     static member inline bgCyan800 = prop.className "bg-cyan-800"
     static member inline bgCyan900 = prop.className "bg-cyan-900"
     static member inline bgCyan950 = prop.className "bg-cyan-950"
+
+    // Sky
     static member inline bgSky50 = prop.className "bg-sky-50"
     static member inline bgSky100 = prop.className "bg-sky-100"
     static member inline bgSky200 = prop.className "bg-sky-200"
     static member inline bgSky300 = prop.className "bg-sky-300"
     static member inline bgSky400 = prop.className "bg-sky-400"
     static member inline bgSky500 = prop.className "bg-sky-500"
-
     static member inline bgSky600 = prop.className "bg-sky-600"
     static member inline bgSky700 = prop.className "bg-sky-700"
     static member inline bgSky800 = prop.className "bg-sky-800"
     static member inline bgSky900 = prop.className "bg-sky-900"
     static member inline bgSky950 = prop.className "bg-sky-950"
+
+    // Blue
     static member inline bgBlue50 = prop.className "bg-blue-50"
     static member inline bgBlue100 = prop.className "bg-blue-100"
     static member inline bgBlue200 = prop.className "bg-blue-200"
@@ -132,16 +219,85 @@ type backgroundColor =
     static member inline bgBlue800 = prop.className "bg-blue-800"
     static member inline bgBlue900 = prop.className "bg-blue-900"
     static member inline bgBlue950 = prop.className "bg-blue-950"
-    static member inline bgSlate100 = prop.className "bg-slate-100"
-    static member inline bgSlate200 = prop.className "bg-slate-200"
-    static member inline bgSlate300 = prop.className "bg-slate-300"
-    static member inline bgSlate400 = prop.className "bg-slate-400"
-    static member inline bgSlate500 = prop.className "bg-slate-500"
-    static member inline bgSlate600 = prop.className "bg-slate-600"
-    static member inline bgSlate700 = prop.className "bg-slate-700"
-    static member inline bgSlate800 = prop.className "bg-slate-800"
-    static member inline bgSlate900 = prop.className "bg-slate-900"
-    static member inline bgSlate950 = prop.className "bg-slate-950"
+
+    // Indigo
+    static member inline bgIndigo50 = prop.className "bg-indigo-50"
+    static member inline bgIndigo100 = prop.className "bg-indigo-100"
+    static member inline bgIndigo200 = prop.className "bg-indigo-200"
+    static member inline bgIndigo300 = prop.className "bg-indigo-300"
+    static member inline bgIndigo400 = prop.className "bg-indigo-400"
+    static member inline bgIndigo500 = prop.className "bg-indigo-500"
+    static member inline bgIndigo600 = prop.className "bg-indigo-600"
+    static member inline bgIndigo700 = prop.className "bg-indigo-700"
+    static member inline bgIndigo800 = prop.className "bg-indigo-800"
+    static member inline bgIndigo900 = prop.className "bg-indigo-900"
+    static member inline bgIndigo950 = prop.className "bg-indigo-950"
+
+    // Violet
+    static member inline bgViolet50 = prop.className "bg-violet-50"
+    static member inline bgViolet100 = prop.className "bg-violet-100"
+    static member inline bgViolet200 = prop.className "bg-violet-200"
+    static member inline bgViolet300 = prop.className "bg-violet-300"
+    static member inline bgViolet400 = prop.className "bg-violet-400"
+    static member inline bgViolet500 = prop.className "bg-violet-500"
+    static member inline bgViolet600 = prop.className "bg-violet-600"
+    static member inline bgViolet700 = prop.className "bg-violet-700"
+    static member inline bgViolet800 = prop.className "bg-violet-800"
+    static member inline bgViolet900 = prop.className "bg-violet-900"
+    static member inline bgViolet950 = prop.className "bg-violet-950"
+
+    // Purple
+    static member inline bgPurple50 = prop.className "bg-purple-50"
+    static member inline bgPurple100 = prop.className "bg-purple-100"
+    static member inline bgPurple200 = prop.className "bg-purple-200"
+    static member inline bgPurple300 = prop.className "bg-purple-300"
+    static member inline bgPurple400 = prop.className "bg-purple-400"
+    static member inline bgPurple500 = prop.className "bg-purple-500"
+    static member inline bgPurple600 = prop.className "bg-purple-600"
+    static member inline bgPurple700 = prop.className "bg-purple-700"
+    static member inline bgPurple800 = prop.className "bg-purple-800"
+    static member inline bgPurple900 = prop.className "bg-purple-900"
+    static member inline bgPurple950 = prop.className "bg-purple-950"
+
+    // Fuchsia
+    static member inline bgFuchsia50 = prop.className "bg-fuchsia-50"
+    static member inline bgFuchsia100 = prop.className "bg-fuchsia-100"
+    static member inline bgFuchsia200 = prop.className "bg-fuchsia-200"
+    static member inline bgFuchsia300 = prop.className "bg-fuchsia-300"
+    static member inline bgFuchsia400 = prop.className "bg-fuchsia-400"
+    static member inline bgFuchsia500 = prop.className "bg-fuchsia-500"
+    static member inline bgFuchsia600 = prop.className "bg-fuchsia-600"
+    static member inline bgFuchsia700 = prop.className "bg-fuchsia-700"
+    static member inline bgFuchsia800 = prop.className "bg-fuchsia-800"
+    static member inline bgFuchsia900 = prop.className "bg-fuchsia-900"
+    static member inline bgFuchsia950 = prop.className "bg-fuchsia-950"
+
+    // Pink
+    static member inline bgPink50 = prop.className "bg-pink-50"
+    static member inline bgPink100 = prop.className "bg-pink-100"
+    static member inline bgPink200 = prop.className "bg-pink-200"
+    static member inline bgPink300 = prop.className "bg-pink-300"
+    static member inline bgPink400 = prop.className "bg-pink-400"
+    static member inline bgPink500 = prop.className "bg-pink-500"
+    static member inline bgPink600 = prop.className "bg-pink-600"
+    static member inline bgPink700 = prop.className "bg-pink-700"
+    static member inline bgPink800 = prop.className "bg-pink-800"
+    static member inline bgPink900 = prop.className "bg-pink-900"
+    static member inline bgPink950 = prop.className "bg-pink-950"
+
+    // Rose
+    static member inline bgRose50 = prop.className "bg-rose-50"
+    static member inline bgRose100 = prop.className "bg-rose-100"
+    static member inline bgRose200 = prop.className "bg-rose-200"
+    static member inline bgRose300 = prop.className "bg-rose-300"
+    static member inline bgRose400 = prop.className "bg-rose-400"
+    static member inline bgRose500 = prop.className "bg-rose-500"
+    static member inline bgRose600 = prop.className "bg-rose-600"
+    static member inline bgRose700 = prop.className "bg-rose-700"
+    static member inline bgRose800 = prop.className "bg-rose-800"
+    static member inline bgRose900 = prop.className "bg-rose-900"
+    static member inline bgRose950 = prop.className "bg-rose-950"
+
 [<Erase>]
 type borderRadius =
     /// Border Radius with `rounded-none`
