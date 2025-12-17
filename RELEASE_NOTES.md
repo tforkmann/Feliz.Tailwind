@@ -1,5 +1,18 @@
-#### 4.0.1 - 2025-12-05
+#### 4.0.2 - 2025-12-17
 * **Major release with 70+ new Tailwind utility categories**
+* **Complete background color palette** - Added all missing colors:
+  - Gray (50-950) - previously missing entirely
+  - Zinc (50-950) - new
+  - Neutral (50-950) - new
+  - Stone (50-950) - new
+  - Indigo (50-950) - new
+  - Violet (50-950) - new
+  - Purple (50-950) - new
+  - Fuchsia (50-950) - new
+  - Pink (50-950) - new
+  - Rose (50-950) - new
+  - Special values: bgInherit, bgCurrent, bgTransparent
+  - Total: 247 background colors (was ~133)
 * Bug fixes:
   - Fixed `textColor` - all colors now have correct hyphens (e.g., `text-slate-50` instead of `text-slate50`)
   - Fixed `margin` - `m0`, `mr0`, `mb0`, `ml0` now correctly output `m-0`, `mr-0`, `mb-0`, `ml-0`
@@ -118,7 +131,7 @@
 * Accessibility utilities:
   - `screenReaders` (sr-only, not-sr-only)
   - `forcedColorAdjust` (forced-color-adjust-auto, forced-color-adjust-none)
-* Total utilities increased from ~1100 to ~2000+
+* Total utilities increased from ~1100 to ~2500+ (149 types, 2486 members)
 
 #### 3.3.0 - 2025-11-28
 * Update package versions in paket.lock for Fable and related dependencies
